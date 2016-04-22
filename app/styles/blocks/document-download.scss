@@ -1,0 +1,41 @@
+.document-download {
+  padding: rem-calc(60px 0 40px);
+  margin-bottom: rem-calc(30px);
+  .btn {
+    min-height: rem-calc(50px);
+    min-width: rem-calc(145px);
+  }
+  .media {
+    margin-bottom: 25px;
+  }
+  .radio-custom .label-control {
+    padding-left: 40px;
+    float: left;
+  }
+  .media-left {
+    padding-right: rem-calc(20px);
+    .icon {
+      font-size: rem-calc(60px);
+    }
+  }
+  .media-body {
+    font-size: rem-calc(15px);
+    font-weight: normal;
+    p {
+      margin-bottom: 0;
+    }
+    .title-3 {
+      margin-bottom: 0;
+    }
+  }
+
+}
+.list-document {
+  padding-right: rem-calc(60px);
+  .radio-custom {
+    .label-control:before,
+    .label-control:after {
+      top: rem-calc(30px);
+    }
+  }
+}

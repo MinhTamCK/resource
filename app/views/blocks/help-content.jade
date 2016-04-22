@@ -1,0 +1,35 @@
+.help-content
+  .content-heading
+    h2.title-6 Aides
+    .content
+      h3.title-7.hidden-xs Aide Filtre(s) actif(s) :
+      +filter-active-list([
+        {text: 'ouverture'},
+        {text: 'Navigation dans la base de données'},
+        {text: 'Navigation dans'},
+        {text: 'Utilisation des différentes listes d\'IG'}
+      ]).tag-list
+  .collapse-block
+    .collapse-wrap
+      .collapse-heading
+        a(role='button', data-toggle='collapse', href='#filterOne', aria-expanded='false', aria-controls='filterOne', class='collapse-control')
+          span.sr-only Couverture
+        h2.title-1 Couverture
+      #filterOne.collapse.in
+        .collapse-body
+          p La base des indications géographiques (IG) comprend les données relatives à la totalité des demandes d’IG faîtes à l’INPI à partir de la publication au BOPI de leur premier avis d’ouverture d’enquête publique. Les IG portant les statuts légaux « Demande rejetée » et « Homologation retirée » sont conservées dans la base de données.
+          +link({title: 'Lire la suite', href: '#'}).btn.btn-icon.link-3
+            span.icon.icon-right
+            |Lire la suite
+        .panel.panel-1
+          .panel-body
+            p.text Cette réponse vous a été utile ?
+            .btn-group-2
+              +button({name: 'yes', type: 'button'}).btn.btn-2 Oui
+              +button({name: 'no', type: 'button'}).btn.btn-2 Non
+  .panel.panel-2.text-center
+    h3.panel-title Votre question ne figure pas ici ?
+    .panel-body
+      +link({title: 'Envoyer-nous votre question via le formulaire de contact', href: '#'}).btn.btn-icon.link-3
+          span.icon.icon-right
+          |Envoyer-nous votre question via le formulaire de contact

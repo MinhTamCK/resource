@@ -1,0 +1,15 @@
+mixin infomation-block(opts)
+  div&attributes(attributes)
+    h3.title-3!=opts.title
+    each item in opts.items
+      p!=item
+
+mixin thumbnail(opts)
+  .thumbnail&attributes(attributes)
+    +img({src: opts.src, alt: opts.alt})
+    .caption
+      each item in opts.items
+        p!=item
+    +button(opts.btnOpts)(class=opts.btnOpts.btnClass)=opts.btnOpts.btnText
+mixin text-hint(text)
+  p&attributes(attributes)!=text

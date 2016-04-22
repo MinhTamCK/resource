@@ -1,0 +1,309 @@
+.help-block {
+  margin-top: 0;
+  margin-bottom: rem-calc(70px);
+  .search-block {
+    .label-control {
+      padding-top: 15px;
+      color: $black;
+    }
+    .lable-help-search {text-align: right;}
+  }
+}
+.help-container {
+  .title-6 {
+    margin-top: 0;
+    margin-bottom: rem-calc(30px);
+    font-size: rem-calc(38px);
+    font-family: $font-inpi-bold;
+    color: $black;
+  }
+  .title-7 {
+    float: left;
+    vertical-align: middle;
+    margin: rem-calc(0 10px 10px 0);
+    font-size: rem-calc(16px);
+    font-weight: normal;
+  }
+  .collapse-block {padding-bottom: rem-calc(40px);}
+  .collapse-wrap {
+    padding-top: rem-calc(25px);
+    padding-bottom: rem-calc(20px);
+    .title-1 {
+      margin-bottom: 0;
+    }
+    .collapse-heading {
+      padding: rem-calc(0 60px 5px 30px);
+    }
+    .collapse-body {
+      padding: rem-calc(5px 60px 25px 30px);
+    }
+  }
+  >.row {
+    position: relative;
+    padding-top: rem-calc(30px);
+    &:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 33.3333%;
+      content: "";
+      display: block;
+      width: 1px;
+      background-color: $gray-1;
+    }
+  }
+}
+.help-content {
+  padding-right: rem-calc(15px);
+  .content-heading {
+    padding: rem-calc(0 30px);
+    .content {
+      padding-bottom: rem-calc(20px);
+    }
+  }
+}
+.tag-list {
+  overflow: hidden;
+  li {
+    float: left;
+  }
+}
+.tag {
+  display: inline-block;
+  vertical-align: middle;
+  padding: rem-calc(5px 10px);
+  margin: rem-calc(0 10px 10px 0);
+  background-color: $gray-4;
+  border: none;
+  border-radius: 3px;
+  .tag-text {
+    font-size: rem-calc(12px);
+    color: $black;
+    text-transform: uppercase;
+    overflow: hidden;
+  }
+  .btn-icon {
+    float: right;
+    min-width: 0;
+    margin-left: rem-calc(10px);
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    .icon-cross {
+      font-size: rem-calc(8px);
+    }
+    .no-touch &:hover {
+      background-color: transparent;
+      .icon-cross {
+        color: $orange-1;
+        @include transition(.2s background);
+      }
+    }
+  }
+}
+.panel {
+  margin-bottom: 0;
+  border: 1px solid $gray-1;
+  border-radius: 0;
+  &.panel-1 {
+    margin-bottom: rem-calc(20px);
+    background-color: $gray-light-2;
+    .panel-body {
+      padding: rem-calc(10px 30px);
+      font-family: $font-inpi-bold;
+      font-size: rem-calc(17px);
+    }
+    .btn-group-2 {
+      float: right;
+      min-width: rem-calc(100px);
+      .btn {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+    .text {
+      float: left;
+      padding: rem-calc(10px 0);
+      margin-bottom: 0;
+    }
+  }
+  .panel-title {
+    padding: rem-calc(20px);
+    font-family: $font-inpi-bold;
+    color: $gray-3;
+    background-color: $gray-light-2;
+    border-bottom: 1px solid $gray-1;
+  }
+  &.panel-2 {
+    .panel-body {
+      padding: rem-calc(20px);
+      .btn {
+        white-space: normal;
+      }
+    }
+  }
+}
+.list-group-1 {
+  .list-group-item {
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    .active {
+      &.filter-item {
+        color: $orange-1;
+      }
+    }
+    .filter-item {
+      .no-touch &:hover, &.active, &:focus {
+        color: $orange-1;
+      }
+    }
+  }
+}
+.help-filter {
+  padding-left: rem-calc(15px);
+  .title-1 {
+    margin-bottom: rem-calc(10px);
+    font-size: rem-calc(18px);
+    color: $black;
+  }
+  .filter-item {
+    position: relative;
+    padding: rem-calc(0 0 0 25px);
+    font-family: $font-inpi-bold;
+    color: $gray-3;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+    .icon {
+      position: absolute;
+      top: rem-calc(7px);
+      left: 0;
+      margin-right: rem-calc(15px);
+      font-size: rem-calc(10px);
+      color: $orange-1;
+    }
+    .no-touch &:hover, &.active, &:focus, &:active {outline:none;}
+  }
+}
+.help-result-content {
+  .title-6,
+  .list-result-item {
+    padding-left: rem-calc(30px);
+    padding-right: rem-calc(30px);
+  }
+}
+.list-result {
+  padding-left: 0;
+  li {
+    display: block;
+    padding: rem-calc(30px 0);
+    border-bottom: 1px solid $gray-1;
+    .title-1 {
+      margin-bottom: rem-calc(10px);
+      line-height: 1.4;
+      a {
+        text-decoration: normal;
+        color: $gray-dark-3;
+        &:focus, &:active {
+          text-decoration: normal;
+        }
+      }
+      .key-help {
+        border-bottom: 1px solid $gray-dark-3;
+      }
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    .desc p {margin-bottom: 0;}
+  }
+}
+@media #{$screen-sm-up} {
+  .help-block .search-block {
+    margin-bottom: 0;
+  }
+  .help-container {
+    .title-7 {
+      margin-top: rem-calc(7px);
+    }
+  }
+}
+@media #{$screen-sm-only} {
+  .help-result-content {
+    .title-6,
+    .list-result-item {
+      padding-left: rem-calc(20px);
+      padding-right: rem-calc(20px);
+    }
+  }
+}
+@media #{$screen-xs-only} {
+  .help-block {
+    .search-block {
+      margin-bottom: rem-calc(15px);
+      .lable-help-search {text-align: left;}
+    }
+  }
+  .help-container {
+    .title-6 {
+      margin-bottom: rem-calc(25px);
+    }
+    >.row {
+      padding-top: 0;
+      &:before {
+        display: none;
+      }
+    }
+    .collapse-block {padding-bottom: rem-calc(30px);}
+    .collapse-wrap {
+      padding-top: rem-calc(15px);
+      padding-bottom: rem-calc(15px);
+      .collapse-heading {
+        padding: rem-calc(5px 0 5px 0);
+      }
+      .collapse-body {
+        padding: rem-calc(10px 30px 30px 0);
+      }
+    }
+  }
+  .help-content {
+    padding-left: 0;
+    .content-heading {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  .panel {
+    &.panel-1 {
+      .panel-body {
+        padding: rem-calc(20px 15px);
+      }
+      .text {
+        float: none;
+        padding-top: 0;
+        padding-bottom: rem-calc(20px);
+      }
+      .btn-group-2 {
+        float: none;
+        text-align: center;
+        .btn {
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .help-filter {
+    margin-top: rem-calc(40px);
+    padding-left: 0;
+  }
+  .help-result-content {
+    .title-6,
+    .list-result-item {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

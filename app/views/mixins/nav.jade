@@ -1,0 +1,23 @@
+mixin button-menu
+  button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#main-nav', aria-expanded='false')
+    span.sr-only Menu
+    span.icon-bar
+    span.icon-bar
+    span.icon-bar
+mixin subNav
+  .row
+    .col-sm-4
+      ul.sub-nav.list-unstyled
+        li: +link({title: 'Intégrer la propriété industrielle à votre projet d\'innovation'})
+        li: +link({title: 'Les enjeux de la propriété industrielle'})
+        li: +link({title: 'La marque'})
+    .col-sm-4
+      ul.sub-nav.list-unstyled
+        li: +link({title: 'Intégrer la propriété industrielle à votre projet d\'innovation'})
+        li: +link({title: 'Les enjeux de la propriété industrielle'})
+        li: +link({title: 'La marque'})
+    .col-sm-4
+      ul.sub-nav.list-unstyled
+        li: +link({title: 'Intégrer la propriété industrielle à votre projet d\'innovation'})
+        li: +link({title: 'Les enjeux de la propriété industrielle'})
+        li: +link({title: 'La marque'})

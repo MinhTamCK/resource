@@ -1,0 +1,11 @@
+// Fontface
+@include font-faces($font-inpi-regular $font-inpi-bold $font-inpi-thin);
+@font-face {
+  font-family:"icons";
+  src:url("../fonts/icons.eot");
+  src:url("../fonts/icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/icons.woff") format("woff"),
+    url("../fonts/icons.ttf") format("truetype");
+  font-weight:normal;
+  font-style:normal;
+}

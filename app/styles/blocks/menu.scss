@@ -1,0 +1,206 @@
+.floatleft {
+  float: left;
+}
+.main-menu {
+  a {
+    text-align: center;
+  }
+  .navbar {
+    border: 0;
+    .navbar-collapse {
+      border-color: $gray-1;
+    }
+    .active > a, .active > a:hover
+     {
+      background-color: transparent;
+    }
+  }
+  .navbar-toggle {
+    margin-left: rem-calc(10px);
+    border-radius: 0;
+    border: 0;
+    .icon-bar {
+      background-color: $black;
+      height: 3px;
+      @include border-radius(3px);
+    }
+  }
+  .main-nav {
+    .nav {
+      margin-bottom: 0;
+      margin-top: 0;
+      a {
+        &.collapsed {
+          .text-large {
+            &:before {
+              transform: rotate(180deg);
+              color: $orange-1;
+            }
+          }
+        }
+      }
+      .text-large {
+        position: relative;
+        font-size: rem-calc(15px);
+        font-family: $font-inpi-bold;
+        text-transform: uppercase;
+        padding-right: rem-calc(25px);
+        padding-left: rem-calc(25px);
+        &:before {
+          content: "\f110";
+          position: absolute;
+          top: 50%;
+          right: 0;
+          font-size: rem-calc(4px);
+          font-family: $icons-font;
+          margin-top: rem-calc(-9px);
+        }
+      }
+      .text-small {
+        color: $gray-3;
+        font-family: $font-inpi-regular;
+        display: block;
+        text-transform: none;
+      }
+    }
+    .navbar-nav > li {
+      > a {
+        color: $gray-dark-2;
+      }
+    }
+  }
+  .menu-right {
+    margin: 0 -15px;
+    .list-user {
+      overflow: hidden;
+      li {
+        @extend .floatleft;
+        width: 25%;
+        text-align: center;
+        padding: rem-calc(15px 25px);
+        text-transform: uppercase;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: rem-calc(-7px);
+          height: rem-calc(14px);
+          width: 1px;
+          background-color: $gray-light-3;
+        }
+        a {
+          position: relative;
+          font-size: rem-calc(14px);
+          font-family: $font-inpi-bold;
+          &:hover {
+            text-decoration: none;
+            color: $orange-1;
+          }
+          .badge {
+            position: absolute;
+            top: rem-calc(-12px);
+            right: rem-calc(-15px);
+          }
+        }
+        .language {
+          border-bottom: 1px solid $black;
+        }
+        .icon {
+          font-size: rem-calc(20px);
+        }
+      }
+    }
+  }
+  .sub-nav {
+    padding: rem-calc(55px 0 75px);
+    li {
+      position: relative;
+      padding: rem-calc(20px 28px 20px 10px);
+      border-bottom: 1px solid $gray-1;
+      &:before {
+        content: "\f129";
+        position: absolute;
+        top: 50%;
+        right: rem-calc(25px);
+        margin-top: -4px;
+        font-size: rem-calc(8px);
+        font-family: $icons-font;
+      }
+      &:hover {
+        &:before {
+          color: $orange-1;
+          right: rem-calc(15px);
+          @include transition(.2s ease-in-out right);
+        }
+      }
+    }
+    a {
+      padding-right: rem-calc(17px);
+      font-size: rem-calc(15px);
+      color: $gray-dark;
+      font-family: $font-inpi-bold;
+      text-transform: uppercase;
+      display: inline-block;
+      text-align: left;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+@media #{$screen-sm-only} {
+  .main-menu {
+    .navbar-nav > li {
+      border-bottom: 1px solid $gray-1;
+    }
+    .navbar {
+      position: absolute;
+      top: rem-calc(10px);
+      left: 0;
+      right: 0;
+      z-index: 10;
+    }
+    .main-nav {
+      margin-top: rem-calc(25px);
+      border-bottom: 1px solid $gray;
+    }
+  }
+}
+@media #{$screen-md-up} {
+  .main-menu {
+    margin-left: rem-calc(123px);
+    .navbar-nav > li {
+      position: static;
+      padding: rem-calc(0 15px);
+      &.active, &:hover {
+        border-bottom: 3px solid $gray-dark-3;
+        a {
+          color: $gray-3;
+        }
+      }
+      &:hover {
+        .mega-menu {
+          display: block;
+        }
+      }
+    }
+    .navbar {
+      position: static;
+      margin-bottom: 0;
+      min-height: 100%;
+    }
+    .mega-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $gray-light-2;
+      z-index: 10;
+    }
+    .list-user {
+      margin-top: rem-calc(7px);
+    }
+  }
+}

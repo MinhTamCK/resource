@@ -1,0 +1,14 @@
+.search-block
+  p.hint-text Cherchez des indications géographiques en saisissant par exemple un nom d'indication, un nom de département ou de commune, un code postal, un numéro de demande ou d'homologation.
+  +form({id: 'search-form', action: '#', method: 'get', name: 'search'}).from-search.hidden-print(data-ajax-search='data/example/')
+    .form-group
+      .input-group
+        +input({type: 'text', name: 'search_top',id: 'search_top', clasLabel: 'sr-only', textLabel: 'Search'}).form-control(autocomplete='off')
+        span.input-group-btn
+          +button({type: 'submit', name:'button-search', title: 'Search'}).btn.btn-icon.revert
+            span.icon.icon-search
+            span.sr-only Search
+    .word-block.hidden
+      ul.word-list.list-unstyled
+        li a
+        li b

@@ -1,0 +1,104 @@
+#form-observation.collapse.visible
+  .full-background.form-popin
+    +link({title: 'close', href: '#form-observation'})(role="button", data-toggle="collapse", aria-expanded="true", aria-controls="form-observation").btn.btn-icon.btn-close
+      span.icon.icon-cross
+    +form({name: 'frm-observation',action:'/server/php'})
+      fieldset.fieldset-form.form-heading
+        .heading-popin.text-center
+          h2.title-1 Formuler une observation sur l'IG Raquette basque
+          p Attention : Dans le cadre de la procédure, les informations saisies seront transmises dans leur intégralité à l'INPI ainsi qu'au demandeur de l'IG (organisme de défense et de gestion). Les champs signalés par un * sont obligatoires.
+        .row
+          .form-group
+            .col-md-8.col-md-offset-2.col-sm-offset-0
+              label(for="enter-info").label-control Vous êtes *
+            .col-sm-9.col-md-6.col-md-offset-2.col-sm-offset-0
+              .form-select(data-select-form)
+                span.select-control
+                  span.icon.icon-arrows-updown
+                select(name="enter-info").form-control
+                  option(value="1") Madame
+                  option(value="2") Monsieur
+            .col-sm-3.col-md-2
+              +button({name: 'submit', type: 'submit'}).btn.btn-1.orange Envoyer
+      .form-container
+        fieldset.fieldset-form
+          .form-group
+            p.label-control Votre Votre civilité *
+            .inline-elm
+              +radio-custom({name: 'gender', id: 'male', textLabel: 'Monsieur', checked: true})
+              +radio-custom({name: 'gender', id: 'female', textLabel: 'Madame'})
+          .row
+            .col-sm-6
+              .form-group
+                +input({name: 'last-name', textLabel: 'Votre nom *', clasLabel: 'label-control'}).form-control
+            .col-sm-6
+              .form-group
+                +input({name: 'first-name', textLabel: 'Votre Prénom *', clasLabel: 'label-control'}).form-control
+            .col-sm-6
+              .form-group
+                +input({name: 'career', textLabel: 'Vous société *', clasLabel: 'label-control'}).form-control
+            .col-sm-6
+              .form-group
+                +input({name: 'your-email', textLabel: 'Votre mél *', clasLabel: 'label-control'}).form-control
+        fieldset.fieldset-form
+          .row
+            .col-sm-6
+              .form-group
+                label(for="nature-advice").label-control Nature de l’avis *
+                  a(title="tooltip", href="javascript:void(0)")
+                    span.badge i
+                    span.sr-only tooltip
+                .form-select(data-select-form)
+                  span.select-control
+                    span.icon.icon-arrows-updown
+                  select(name="nature-advice").form-control
+                    option(value="")
+                    option(value="1") Madame
+                    option(value="2") Monsieur
+            .col-sm-6.form-right
+              .form-group
+                label(for="observation-message").label-control Description de l'observation *
+                  a(title="tooltip", href="javascript:void(0)")
+                    span.badge i
+                    span.sr-only tooltip
+                textarea(name="observation-message", id="observation-message", class="form-control textarea", placeholder="3000 caractères maximim, au-delà, utilisez les pièces jointes")
+            .col-sm-6
+              .files-group
+                .form-group
+                  label(for="").label-control Pièces jointes éventuelles (5 pièces ou 8Mo au maximum)
+                    a(title="tooltip", href="javascript:void(0)")
+                      span.badge i
+                      span.sr-only tooltip
+                  .file-elm(data-add-file)
+                    ul.list-file
+                      li.hidden
+                        +thumbnail({
+                          src: 'images/icon-document-2.png', alt: 'File',
+                          items: ['Lorem ipsum dolor.pdf'],
+                          btnOpts: {name: 'delete', type: 'button', btnText: 'Supprimer', btnClass: 'btn btn-1 orange'}
+                        }).thumbnail-1
+                        input(name='pjfile[fj1]',type='file',accept='application/pdf')
+                      li.hidden
+                        +thumbnail({
+                          src: 'images/icon-document-2.png', alt: 'File',
+                          items: ['Lorem ipsum dolor.pdf'],
+                          btnOpts: {name: 'delete-2', type: 'button', btnText: 'Supprimer', btnClass: 'btn btn-1 orange'}
+                        }).thumbnail-1
+                        input(name='pjfile[fj2]',type='file',accept='application/pdf')
+                    .file-custom
+                      //- input(name="files", id="file-upload", type="file")
+                      +button({name: 'upload-btn', type: 'button',id:'file-upload'}).btn.btn-1 Choisissez un fichier
+
+        fieldset.fieldset-form
+          .row
+            .col-md-6
+              .form-group
+                +checkbox-custom({name: 'receive-email', textLabel: 'Recevoir une copie par courriel', checked: true})
+                +checkbox-custom({name: 'receive-form', textLabel: 'Je souhaite être tenu informé des actualités de l’INPI',checked: true})
+                p.alert.alert-1 En conformité avec les dispositions de la loi du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés, le traitement automatisé des données nominatives réalisées à partir du site Internet " www.inpi.fr " a fait l'objet d'une déclaration auprès de la Commission nationale de l'informatique et des libertés (CNIL) sous le n° 1087828
+                p.alert * Champs obligatoires
+              .captcha-block: +img({src: 'images/recaptcha-example.png', alt: 'Captcha'}).img-responsive
+        .btn-group-right
+          +button({name: 'cancel', type: 'button'}).btn.btn-2(data-toggle="collapse", data-target="#form-observation", aria-expanded="false", aria-controls="form-observation") Annuler
+          +button({name: 'submit-form', type: 'submit'}).btn.btn-1.orange Envoyer
+

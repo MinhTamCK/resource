@@ -1,0 +1,19 @@
+.second-nav.hidden-print
+  +second-nav([
+    {role: 'presentation', title: 'Rechercher', href: 'search.html', cls: 'btn btn-1'},
+    {role: 'presentation', title: 'Enquêtes publiques en cours', href: 'public-enquiry.html', cls: 'btn btn-1'},
+    {role: 'presentation', title: 'IG homologuées', href: 'ig-approved.html', cls: 'btn btn-1'},
+    {role: 'presentation', title: 'Toutes les IG', href: 'all-ig.html', cls: 'btn btn-1'},
+    {role: 'presentation', title: 'Aide', cls: 'btn btn-1'}
+  ]).list-btn-function.nav.nav-pills.hidden-xs
+
+  .btn-group.visible-xs.clearfix
+    button.btn.btn-1.btn-dropdowns.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Action
+      span.icon.icon-arrows-updown
+    +second-nav([
+      {role: 'presentation', title: 'Rechercher', href: 'search.html', cls: 'btn btn-1'},
+      {role: 'presentation', title: 'Enquêtes publiques en cours', href: 'public-enquiry.html', cls: 'btn btn-1'},
+      {role: 'presentation', title: 'IG homologuées', href: 'ig-approved.html', cls: 'btn btn-1'},
+      {role: 'presentation', title: 'Toutes les IG', href: 'all-ig.html', cls: 'btn btn-1'},
+      {role: 'presentation', title: 'Aide', cls: 'btn btn-1'}
+    ]).dropdown-menu

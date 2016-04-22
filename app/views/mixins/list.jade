@@ -1,0 +1,36 @@
+mixin second-nav(navObj)
+  ul&attributes(attributes)
+    each item, key in navObj
+      - var active = ''
+      - if (key === menuIndex) active = 'active'
+      li(role=item.role, class=active): +link(item)(class=item.cls)
+
+mixin filter-active-list(items)
+  ul.tag-list.list-unstyled
+    each item in items
+      li
+        span.tag
+          +link({title: item.text, href: 'javacript:void(0);'}).btn.btn-icon
+            span.icon.icon-cross
+            span.sr-only!=item.text
+          span.tag-text!=item.text
+mixin list-group(items)
+  ul.list-group&attributes(attributes)
+    each item in items
+      li.list-group-item
+        +link({title: item.title})(class=item.itemCls).filter-item
+          span.icon.icon-right
+          !=item.text
+          span.bagde!=item.bagde
+        //- +button({name: item.name, type: 'button'})
+
+mixin list-result(opts)
+  ul.list-result&attributes(attributes)
+    each item in opts
+      li.list-result-item
+        h3.title-1
+          +link({title: item.title, href: '#', text: item.text?item.text:item.title})
+        .desc
+          each itemDesc in item.descs
+            p!=itemDesc
+

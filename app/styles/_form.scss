@@ -1,0 +1,315 @@
+// Form
+.btn-icon {
+  border: 1px solid $gray-1;
+  border-radius: 0;
+  padding: rem-calc(13px 30px);
+  min-width: rem-calc(108px);
+  .icon {
+    font-size: rem-calc(21px);
+  }
+  .text {
+    display: inline-block;
+    vertical-align: middle;
+    color: $black;
+  }
+  .no-touch &:hover {
+    background-color: $orange-1;
+    border-color: $orange-1;
+    .icon, .text {
+      color: $white;
+    }
+  }
+  &.revert {
+    background-color: $orange-1;
+    border-color: $orange-1;
+    .icon {color: $white;}
+    .no-touch &:hover {
+      background-color: $gray-light-1;
+      border-color: $gray-1;
+      .icon {color: $black;}
+    }
+  }
+}
+.btn {
+  padding: rem-calc(8px 16px);
+  font-family: $font-inpi-bold;
+  background-color: $gray-light-1;
+  .no-touch &:hover {
+    @include transition(.2s background);
+  }
+  &:active,&.active,
+  &:focus, &:active:focus {
+    box-shadow: none;
+  }
+}
+.btn-1 {
+  border: 1px solid $gray-1;
+  @media #{$screen-sm-up} {
+    .no-touch &:hover, &:active {
+      color: $white;
+      border: 1px solid  $orange-1;
+      background-color: $orange-1;
+    }
+  }
+  &.orange {
+    background-color: $orange-1;
+    color: $white;
+    border: 1px solid  $orange-1;
+    .no-touch &:hover, &:active {
+      color: $black;
+      border: 1px solid  $gray-1;
+      background-color: $gray-light-1;
+    }
+  }
+}
+.btn-2 {
+  color: $orange-1;
+  border: 3px solid $orange-1;
+  .no-touch &:hover {
+    border-color: $gray-1;
+  }
+}
+.from-search {
+  max-width: rem-calc(758px);
+  margin: 0 auto;
+  position: relative;
+  .form-control {
+    border-radius: 0;
+  }
+  .word-block {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: rem-calc(54px);
+    text-align: left;
+    border: 1px solid $gray-1;
+    margin-top: -6px;
+    background-color: $white;
+    z-index: 2;
+    li {
+      padding: rem-calc(0 10px);
+      line-height: rem-calc(24px);
+      .no-touch &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+}
+.btn-group {
+  width: 100%;
+  .btn-dropdowns {
+    position: relative;
+    padding-right: rem-calc(35px);
+    white-space: normal;
+    width: 100%;
+    text-align: left;
+    border-radius: 0;
+    // height: rem-calc(59px);
+    font-weight: 700;
+    font-size: rem-calc(14px);
+    .icon-arrows-updown {
+      position: absolute;
+      transform: translate(0, -50%);
+      top: 50%;
+      right: 20px;
+    }
+  }
+  .dropdown-menu {
+    width: 100%;
+  }
+}
+.error-message {
+  display: inline-block;
+  color: #ff5a5f;
+  font-weight: bold;
+}
+span.error-message {
+  margin-top: 5px;
+}
+
+.search-block {
+  text-align: center;
+  margin-bottom: rem-calc(40px);
+  .btn {
+    min-width: rem-calc(50px);
+    height: rem-calc(50px);
+    padding: rem-calc(12px 16px);
+    border-radius: 0;
+  }
+  .input-group {
+    margin-bottom: 5px;
+  }
+}
+.form-group {
+  text-align: left;
+  @include clearfix;
+  .input-group-addon {
+    border-radius: 0;
+  }
+  .label-control {
+    margin-bottom: rem-calc(20px);
+    color: $gray-3;
+  }
+}
+.form-control {
+  height: rem-calc(50px);
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+}
+.inline-elm {
+  .radio-custom {
+    display: inline-block;
+    margin-right: rem-calc(40px);
+  }
+}
+.textarea {
+  padding: rem-calc(30px);
+}
+
+.radio-custom,
+.checkbox-custom {
+  position: relative;
+  display: block;
+  input[type="radio"],
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+  .label-control {
+    position: relative;
+    display: inline-block;
+    padding-left: 40px;
+    vertical-align: middle;
+    cursor: pointer;
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      content: '';
+      display: inline-block;
+    }
+    &:after {
+      border: 1px solid $gray-1;
+    }
+  }
+}
+.radio-custom {
+  input[type="radio"] {
+    width: rem-calc(18px);
+    height: rem-calc(18px);
+    &:checked {
+      + .label-control:before {
+        content: "";
+        display: block;
+      }
+    }
+  }
+  .label-control {
+    &:after,
+    &:before {
+      border-radius: 50%;
+    }
+    &:before {
+      left: 4px;
+      display: none;
+      width: rem-calc(10px);
+      height: rem-calc(10px);
+      background-color: $black;
+    }
+    &:after {
+      width: rem-calc(18px);
+      height: rem-calc(18px);
+      border: 1px solid $gray-1;
+    }
+  }
+}
+.checkbox-custom {
+  input[type="checkbox"] {
+    width: rem-calc(20px);
+    height: rem-calc(20px);
+    &:checked {
+      + .label-control:before {
+        content: "\f119";
+        left: 4px;
+        font-family: $icons-font;
+        font-size: rem-calc(14px);
+        color: $black;
+      }
+    }
+  }
+  .label-control {
+    &:after {
+      width: rem-calc(20px);
+      height: rem-calc(20px);
+    }
+    a {
+      font-family: $font-inpi-thin;
+      strong {
+        font-family: $font-inpi-bold;
+      }
+    }
+  }
+}
+
+.fieldset-form {
+  display: block;
+  padding-top: rem-calc(25px);
+  padding-bottom: rem-calc(25px);
+  border-bottom: 1px solid $gray-1;
+  .alert {
+    padding: 0;
+    margin-bottom: rem-calc(15px);
+    color: $gray-3;
+  }
+}
+.alert-1 {
+  font-size: rem-calc(14px);
+}
+.file-custom {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+    z-index: 1;
+  }
+}
+.btn-group-right {
+  text-align: right;
+  .btn {
+    display: inline-block;
+    margin-left: 15px;
+  }
+}
+.form-select {
+  position: relative;
+  .select-control {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: rem-calc(50px);
+    padding: rem-calc(12px 18px);
+    background-color: $gray-light-1;
+    border-left: 1px solid $gray-1;
+  }
+}
+@media #{$screen-xs-only} {
+  .textarea {
+    padding: rem-calc(15px);
+  }
+}

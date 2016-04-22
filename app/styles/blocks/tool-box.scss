@@ -1,0 +1,115 @@
+.float-left {
+  float: left;
+}
+.tool-box {
+  overflow: hidden;
+  margin: rem-calc(30px 0);
+  text-align: center;
+  &.tool-box-bottom {
+    margin-bottom: rem-calc(60px);
+  }
+  .pagination {
+    margin: 0;
+    .btn {
+      &:first-child { margin-right: rem-calc(10px);}
+      &:last-child { margin-left: rem-calc(10px);}
+    }
+    .btn-control {
+     @extend .float-left;
+      padding: rem-calc(14px 21px);
+      background-color: $gray-4;
+      border-radius: 0;
+      .icon {
+        font-size: rem-calc(8px);
+        letter-spacing: -2px;
+      }
+      .no-touch &:hover {
+        background-color: $gray-1;
+        text-decoration: none;
+      }
+    }
+  }
+}
+.pagination-block {
+  @extend .float-left;
+  margin: rem-calc(0 10px);
+  .form-pagination {
+    @extend .float-left;
+  }
+  .form-control {
+    width: 48px;
+    height: 50px;
+    border-radius: 0;
+    border-color: $gray-1;
+    font-family: $font-inpi-bold;
+    color: $gray-3;
+    text-align: center;
+    padding: rem-calc(12px 10px);
+  }
+  .total-number {
+    @extend .float-left;
+    position: relative;
+    padding: rem-calc(12px 9px 12px 16px);
+    line-height: rem-calc(25px);
+    font-family: $font-inpi-bold;
+    color: $gray-3;
+    &:before {
+      content: '/';
+      position: absolute;
+      top: 50%;
+      left: 9px;
+      margin-top: rem-calc(-13px);
+    }
+  }
+}
+// @media only screen and (max-width: $screen-xs) {
+//   .tool-box {
+//     .pagination {
+//       .btn-control {
+//         padding: rem-calc(9px 12px);
+//         width: rem-calc(40px);
+//       }
+//       .btn:first-child { margin-right: 8px;}
+//       .btn:last-child { margin-left: 8px;}
+//     }
+//   }
+//   .pagination-block {
+//     margin: 0 rem-calc(6px);
+//     .form-control {
+//       height: rem-calc(40px);
+//     }
+//     .total-number {
+//       padding: rem-calc(8px 12px);
+//       &:before {
+//         left: 7px;
+//       }
+//     }
+//   }
+// }
+@media #{$screen-xs-only} {
+  .tool-box {
+    .btn-1 {
+      margin: rem-calc(0 24px 20px 24px);
+      display: block;
+      padding-top: rem-calc(13px);
+      padding-bottom: rem-calc(13px);
+    }
+  }
+}
+@media #{$screen-sm-up} {
+  .tool-box {
+    .btn-group {
+      float: left;
+    }
+    .pagination, .inner {
+      float: right;
+    }
+    .btn-group {
+      width: auto;
+    }
+    .btn-1 {
+      margin-right: rem-calc(20px);
+      display: inline-block;
+    }
+  }
+}

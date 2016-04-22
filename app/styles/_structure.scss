@@ -1,0 +1,13 @@
+// Structure
+html {
+  font-size: $font-size-base;
+}
+.container-fluid {
+  max-width: $container-lg + $grid-gutter-width;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  margin-top: rem-calc(-30px);
+}

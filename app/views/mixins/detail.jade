@@ -1,0 +1,20 @@
+mixin detail-block()
+  include ../blocks/detail-heading
+  .detail-block(data-ajax-table = '{"pageList": [{"page": "1","id":"http://localhost:3000/detail-documents.html#page1"},{"page": "2","id":"http://localhost:3000/detail-documents.html#page2"}]}')
+    if(isDocuments)
+      include ../blocks/tool-box-1
+    if(isDownload)
+      include ../blocks/tool-box
+    if(isToolButton)
+      include ../blocks/form-popin
+    if(isDocuments)
+      include ../blocks/document-download
+    if(isMessNotice)
+      include ../blocks/mess-notice
+    .full-background.content
+      include ../blocks/nav-tab-detail
+      if block
+        block
+    include ../blocks/tool-box-bottom
+  script.
+    var base_url = '';

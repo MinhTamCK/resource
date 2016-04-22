@@ -1,0 +1,21 @@
+mixin table(thOpts, trOpts, attr)
+  table&attributes(attr||attributes)
+    thead
+      tr
+        each th in thOpts
+          th&attributes(th.attr||{}): +link(th.link)
+    tbody
+      each tr in trOpts
+        tr
+          each td in tr
+            td!=td
+
+mixin table-mobile(items)
+  .table-mobile&attributes(attr||attributes)
+    each item in items
+      .items
+        each i in item
+          .item
+            .col-left!=i.title
+            .col-right!=i.desc
+

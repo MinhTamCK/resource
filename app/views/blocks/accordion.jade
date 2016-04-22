@@ -1,0 +1,52 @@
+.collapse-wrap
+  .collapse-heading
+    a(role='button', data-toggle='collapse', href='#collapseOne', aria-expanded='false', aria-controls='collapseOne', class='collapse-control collapsed')
+      span.sr-only Liste des opérateurs
+    h2.title-1 Liste des opérateurs
+    h3.title-3 ABC raquettes, Dunlop, Head, Les artisans de la raquette
+  #collapseOne.collapse
+    .row.equa-col
+      .col-sm-6.col-md-4
+        +infomation-block({
+          title: 'ABC raquettes',
+          items: ['Rue du jeu de paume']
+        }).information-block
+      .col-sm-6.col-md-4
+        +infomation-block({
+          title: 'Dunlop',
+          items: ['Rue du jeu de paume', 'Bat B', '64200 Biarritz']
+        }).information-block
+      .col-sm-6.col-md-4
+        +infomation-block({
+          title: 'Head',
+          items: ['Rue du jeu de paume', '64200 Biarritz']
+        }).information-block
+      .col-sm-6.col-md-4
+        +infomation-block({
+          title: 'Les Artisans de la raquette',
+          items: ['2 rue de la Liberté', '64200 Biarritz']
+        }).information-block
+.collapse-wrap
+  .collapse-heading
+    a(role='button', data-toggle='collapse', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo', class='collapse-control collapsed')
+      span.sr-only Zone géographique
+    h2.title-1 Zone géographique
+    h3.title-3 Bouches du Rhône, Var, Vaucluse, sud de la Drôme, Alpes de Haute Provence, Marseille, Toulon, Côte d'azur, Corrèze, Cannes, Lozère
+  #collapseTwo.collapse
+    #accordionTwo.panel-custom-group(role='tablist', aria-multiselectable='true')
+      .panel-custom.panel-custom-default
+        .panel-heading(role='tab')
+          +link({title: 'voir les communes'})(role="button", data-toggle="collapse", data-parent="#accordion", href="#panelThree", aria-expanded="true", aria-controls="panelThree", data-title-hide="Voir les communes", data-title-show="Masquer les communes", class="acc-control")
+            span.icon.icon-up
+          h4.panel-title Ariège 09
+        #panelThree.panel-collapse.collapse.in(role='tabpanel')
+          .panel-body
+            p Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      .panel-custom.panel-custom-default
+        .panel-heading(role='tab')
+          +link({title: 'Masquer les communes'})(role="button", data-toggle="collapse", data-parent="#accordionTwo", href="#panelFour", aria-expanded="true", aria-controls="panelFour", data-title-hide="Voir les communes", data-title-show="Masquer les communes", class="acc-control collapsed")
+              span.icon.icon-up
+          h4.panel-title Cantal 15
+        #panelFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingOne')
+          .panel-body
+            p Cantal 15 Aurillac (15000), Ytrac (15000), Naucelles (15000), Saint-Georges (15100), Tanavelle (15100), Roffiac (15100), Montchamp (15100), Alleuze (15100), Les Ternes (15100), Sériers (15100), Villedieu (15100), Mentières (15100), Védrines-Saint-Loup (15100), Tiviers (15100), Soulages (15100), Coren (15100), Anglards-de-Saint-Flour (15100), Vabres (15100), Saint-Flour (15100), Andelat (15100), Deux-Verges (15110), Fridefont (15110), Saint-Urcize (15110), Chaudes-Aigues (15110), Anterrieux (15110), Maurines (15110), Jabrun (15110), Espinasse (15110), Saint-Rémy-de-Chaudes-Aigues (15110), La Trinitat (15110), Saint-Martial (15110), Lieutadès (15110), Leucamp (15120), Vieillevie (15120), Ladinhac (15120), Montsalvy (15120), Junhac (15120), Lacapelle-del-Fraisse (15120), Labesserette (15120), Sansac-Veinazès (15120), Lapeyrugue (15120), Giou-de-Mamou (15130), Lafeuillade-en-Vézie (15130), Teissières-lès-Bouliès (15130), Arpajon-sur-Cère (15130), Saint-Simon (15130), Prunet (15130), Cros-de-Ronesque (15130), Labrousse (15130), Saint-Étienne-de-Carlat (15130), Yolet (15130), Vézac (15130), Sansac-de-Marmiesse (15130), Carlat (15130), Ytrac (15130), Vezels-Roussy (15130), Drugeac (15140), Saint-Chamant (15140), Saint-Martin-Valmeroux (15140), Saint-Cirgues-de-Malbert (15140), Saint-Paul-de-Salers (15140), Besse (15140), Fontanges (15140), Salers (15140), Saint-Projet-de-Salers (15140), Sainte-Eulalie (15140), Le Fau (15140), Saint-Bonnet-de-Salers (15140), Saint-Martin-Cantalès (15140), Saint-Gérons (15150), Rouffiac (15150), Nieudan (15150), Arnac (15150), Siran (15150), Lacapelle-Viescamp (15150), Montvert (15150), Cros-de-Montvert (15150), Saint-Victor (15150), Saint-Étienne-Cantalès (15150), Laroquebrou (15150), Saint-Santin-Cantalès (15150), Glénat (15150), Landeyrat (15160), Pradiers (15160), Allanche (15160), Vernols (15160), Vèze (15160), Valjouze (15170), Neussargues-Moissac (15170), Chalinargues (15170), Joursac (15170), Celles (15170), Ferrières-Saint-Mary (15170), Sainte-Anastasie (15170), Rézentières (15170), Peyrusse (15170), Coltines (15170), Talizat (15170), Montboudif (15190), Saint-Saturnin (15190), Montgreleix (15190), Marcenat (15190), Saint-Amandin (15190), Lugarde (15190), Condat (15190), Chanterelle (15190), Saint-Bonnet-de-Condat (15190), Chalvignac (15200), Le Vigean (15200), Arches (15200), Sourniac (15200), Méallet (15200), Jaleyrac (15200), Salins (15200), Mauriac (15200), Madic (15210), Ydes (15210), Marcolès (15220), Vitrac (15220), Saint-Mamet-la-Salvetat (15220), Saint-Antoine (15220), Roannes-Saint-Mary (15220), Brezons (15230), Saint-Martin-sous-Vigouroux (15230), Cézens (15230), Malbo (15230), Lacapelle-Barrès (15230), Paulhenc (15230), Narnhac (15230), Sainte-Marie (15230), Gourdièges (15230), Pierrefort (15230), La Monselie (15240), Vebret (15240), Saignes (15240), Bassignac (15240), Antignac (15240), Le Monteil (15240), Auzers (15240), Sauvat (15240), Marmanhac (15250), Naucelles (15250), Teissières-de-Cornet (15250), Jussac (15250), Saint-Paul-des-Landes (15250), Crandelles (15270), Champs-sur-Tarentaine-Marchal (15270), Saint-Saury (15290), Roumégoux (15290), Omps (15290), Le Rouget (15290), Cayrols (15290), Parlan (15290), Pers (15290), La Ségalassière (15290), Ségur-les-Villas (15300), Lavigerie (15300), Dienne (15300), Valuéjols (15300), Laveissière (15300), La Chapelle-d'Alagnon (15300), Laveissenet (15300), Chavagnac (15300), Albepierre-Bredons (15300), Virargues (15300), Chastel-sur-Murat (15300), Murat (15300), Ussel (15300), Saint-Cernin (15310), Girgols (15310), Saint-Illide (15310), Freix-Anglards (15310), Tournemire (15310), Clavières (15320), Chaliers (15320), Ruynes-en-Margeride (15320), Saint-Just (15320), Faverolles (15320), Loubaresse (15320), Saint-Marc (15320), Lorcières (15320), Sénezergues (15340), Mourjou (15340), Cassaniouze (15340), Calvinet (15340), Saint-Pierre (15350), Veyrières (15350), Champagnac (15350), Le Vaulmier (15380), Saint-Vincent-de-Salers (15380), Moussages (15380), Anglards-de-Salers (15380), Le Falgoux (15380), Cheylade (15400), Marchastel (15400), Saint-Hippolyte (15400), Menet (15400), Apchon (15400), Trizac (15400), Saint-Étienne-de-Chomeil (15400), Riom-ès-Montagnes (15400), Collandres (15400), Valette (15400), Le Claux (15400), Cussac (15430), Paulhac (15430), Vieillespesse (15500), La Chapelle-Laurent (15500), Auriac-l'Église (15500), Molompize (15500), Bonnac (15500), Chazelles (15500), Saint-Mary-le-Plain (15500), Molèdes (15500), Celoux (15500), Laurie (15500), Rageade (15500), Lastic (15500), Saint-Poncy (15500), Charmensac (15500), Massiac (15500), Saint-Cirgues-de-Jordanne (15590), Mandailles-Saint-Julien (15590), Velzic (15590), Lascelle (15590), Saint-Santin-de-Maurs (15600), Leynhac (15600), Montmurat (15600), Boisset (15600), Rouziers (15600), Quézac (15600), Fournoulès (15600), Saint-Constant (15600), Saint-Julien-de-Toursac (15600), Le Trioulou (15600), Maurs (15600), Saint-Étienne-de-Maurs (15600), Pleaux (15700), Ally (15700), Brageac (15700), Chaussenac (15700), Barriac-les-Bosquets (15700), Escorailles (15700), Vic-sur-Cère (15800), Polminhac (15800), Thiézac (15800), Saint-Clément (15800), Saint-Jacques-des-Blats (15800), Raulhac (15800), Pailherols (15800), Jou-sous-Monjou (15800), Badailhac (15800), Leyvaux (43450)

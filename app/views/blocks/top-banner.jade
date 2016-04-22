@@ -1,0 +1,10 @@
+.top-banner
+  span.image-background(data-interchange="['images/banner-mobile.jpg,'images/banner-tablet.jpg,images/banner-desktop.jpg']")
+  .container-fluid
+    include breadcrumb
+    .title-block
+      h1.title-page
+        span.bold Base
+        | indications géographiques
+    +link({title: 'Inpi', href: '#'}).logo-ig.visible-sm-up
+      +img({src: 'images/logo-ig.png', alt: 'Inpi'})

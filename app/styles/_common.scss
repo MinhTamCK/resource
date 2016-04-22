@@ -1,0 +1,142 @@
+// Common
+ul, ol {
+  margin: 0;
+}
+input, select, textarea {
+  -webkit-appearance: none;
+}
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+.wrapper {
+  overflow: hidden;
+}
+.title-1 {
+  font-size: rem-calc(21px);
+  font-family: $font-inpi-bold;
+  margin: rem-calc(0 0 20px);
+}
+.title-2 {
+  font-family: $font-inpi-regular;
+  font-size: rem-calc(28px);
+}
+.title-3 {
+  font-family: $font-inpi-bold;
+  font-size: rem-calc(15px);
+  line-height: rem-calc(22px);
+  margin: rem-calc(0 0 10px);
+}
+.bold {
+  font-family: $font-inpi-bold;
+}
+
+.information-block {
+  margin-bottom: rem-calc(25px);
+  padding: rem-calc(20px 30px);
+  border: 1px solid $gray-1;
+  p {
+    font-size: rem-calc(15px);
+    &:last-child { margin-bottom: 0;}
+  }
+}
+.badge {
+  padding: rem-calc(4px 6px);
+  font-size: rem-calc(10px);
+  color: $white;
+  font-family: $font-family-sans-serif;
+  font-weight: bold;
+  background-color: $orange-1;
+}
+
+.full-background {
+  position: relative;
+  background-color: $gray-2;
+  &:after, &:before {
+    position: absolute;
+    top: rem-calc(-1px);
+    bottom: rem-calc(-1px);
+    content: "";
+    width: 100%;
+    background-color: $gray-2;
+    border-top: 1px solid $gray-1;
+    border-bottom: 1px solid $gray-1;
+    z-index: -1;
+  }
+  &:before {
+    left: -50%;
+  }
+  &:after {
+    right: -50%;
+  }
+  .btn.btn-close {
+    position: absolute;
+    top: rem-calc(20px);
+    right: 0;
+    display: inline-block;
+    width: rem-calc(40px);
+    min-width: 0;
+    height: rem-calc(40px);
+    min-height: 0;
+    padding: rem-calc(7px);
+    text-align: center;
+    background-color: $white;
+    border-radius: 50%;
+    border: none;
+    .icon {
+      font-size: rem-calc(10px);
+    }
+    .no-touch &:hover {
+      background-color: $orange-1;
+      @include transition(.2s background);
+    }
+  }
+  &.content {
+    background-color: $white;
+    &:after, &:before {
+      background-color: $white;
+      border: none;
+    }
+  }
+}
+.visible {
+  overflow: visible;
+}
+.link-3 {
+  min-width: 0;
+  padding: 0;
+  color: $orange-1;
+  background-color: transparent;
+  border: none;
+  .icon-right {
+    margin-right: rem-calc(5px);
+    font-size: rem-calc(10px);
+  }
+  .no-touch &:hover {
+    background-color: transparent;
+    .icon {color: $black;}
+  }
+}
+.loadding {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.6);
+  z-index: 20;
+  .img-loadding {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: rem-calc(-83px);
+    margin-left: rem-calc(-83px);
+  }
+}
+@media #{$screen-sm-up} {
+  .information-block {
+    min-height: rem-calc(116px);
+    margin-bottom: rem-calc(45px);
+  }
+}

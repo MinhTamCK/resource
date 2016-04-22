@@ -1,0 +1,14 @@
+mixin link(opts)
+  -opts.href = opts.href||'#'
+  -opts.text = opts.text||opts.title
+  a(href=opts.href, title=opts.title)&attributes(opts.attr||attributes)
+    if block
+      block
+    else
+      !=opts.text
+mixin link-text(opts)
+  -opts.href = opts.href||'#'
+  a(href=opts.href, title=opts.text)&attributes(opts.attr||attributes)
+    span.text-large!=opts.text
+    if block
+      block

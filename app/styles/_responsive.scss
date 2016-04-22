@@ -1,0 +1,17 @@
+// Responsive
+@media #{$screen-sm-up} {
+  main {
+    margin-top: rem-calc(-60px);
+  }
+  .btn-1 {
+    padding: rem-calc(10px 20px);
+  }
+}
+
+@media #{$screen-md-up} {
+  .search-block {
+    margin-bottom: rem-calc(64px);
+  }
+}
+
+

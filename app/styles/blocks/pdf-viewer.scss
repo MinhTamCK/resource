@@ -1,0 +1,298 @@
+.no-touch {
+  .pdf-viewer {
+    .viewer-sm {
+      display: none;
+    }
+  }
+}
+.touch {
+  .pdf-viewer {
+    .viewer-md {
+      display: none;
+    }
+  }
+}
+.pdf-viewer {
+  .col-left { border: 1px solid $gray-1;}
+  .checkbox-list {
+    padding-bottom: rem-calc(16px);
+    .title-4 {
+      margin: rem-calc(21px 0 18px 0);
+      padding-left: rem-calc(30px);
+      font-family: $font-inpi-bold;
+      font-size: rem-calc(16px);
+    }
+    .checkbox-custom {
+      padding: rem-calc(14px 30px);
+      position: relative;
+      clear: both;
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: rem-calc(-10px);
+        margin-left: rem-calc(-5px);
+        width: 0 ;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid $orange-2;
+        opacity: 0;
+        transform: rotate(180deg);
+        z-index: 3;
+      }
+      .label-control {
+        position: absolute;
+        top: 50%;
+        margin-top: rem-calc(-10px);
+        margin-bottom: 0;
+        float: left;
+        min-height: rem-calc(20px);
+        padding-left: rem-calc(20px);
+      }
+    }
+    a {
+      display: inline-block;
+      margin-left: rem-calc(35px);
+    }
+    .download-file { display: none;}
+    .group-checkbox {
+      &.active,.no-touch &:hover {
+        .checkbox-custom {
+          background-color: $orange-2;
+          &:before {
+            border-top-color: $orange-2;
+            opacity: 1;
+          }
+        }
+         a {
+          color: $white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .viewer-block {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: rem-calc(10px 30px);
+    border-bottom: 1px solid $gray-1;
+    .name-pdf {
+      width: percentage(250px/734px);
+      display: inline-block;
+    }
+    .button-center {
+      position: absolute;
+      left: 50%;
+      margin-left: rem-calc(-56px);
+      top: rem-calc(17px);
+    }
+    .button-right {
+      float: right;
+      .btn {
+        margin-top: rem-calc(7px);
+      }
+    }
+    .icon {
+      font-size: 0;
+      color: transparent;
+      background-repeat: no-repeat;
+      background-size: 9px;
+      background-position: 50%;
+      float: left;
+    }
+    .icon-previous {
+      background-image: url('../images/icon-prev-1.png');
+    }
+    .icon-next {
+      background-image: url('../images/icon-next-1.png');
+    }
+    .btn {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      padding: 0;
+      float: left;
+      margin-left: rem-calc(10px);
+    }
+    .btn-previous {
+      background-image: url('../images/icon-prev.png');
+      margin-right: rem-calc(10px);
+    }
+    .btn-next {
+      background-image: url('../images/icon-next.png');
+    }
+    .btn-print {
+      background-image: url('../images/icon-print.png');
+    }
+    .btn-largeview {
+      background-image: url('../images/icon-largeview.png');
+    }
+    .icon, .btn {
+      width: rem-calc(30px);
+      height: rem-calc(30px);
+      &:hover {
+        opacity: .5;
+      }
+    }
+    .pagination-block {
+      .form-control {
+        width: rem-calc(40px);
+        height: rem-calc(40px);
+        padding-left: rem-calc(5px);
+        padding-right: rem-calc(5px);
+      }
+      .total-number {
+        padding-top: rem-calc(8px);
+        padding-bottom: rem-calc(8px);
+      }
+    }
+  }
+  .download-file {
+    .btn {
+      display: block;
+      padding-top: rem-calc(25px);
+      padding-bottom: rem-calc(25px);
+      border-color: transparent;
+      border-bottom-color: $gray-1;
+      background-color: $gray-2;
+      .icon {
+        margin-right: rem-calc(10px);
+      }
+      .icon, .text {
+        color: $gray-3;
+      }
+      &:hover {
+        border-bottom-color: $gray-1;
+        .icon, .text {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+@media #{$screen-xs-only} {
+  .pdf-viewer {
+    .col-left { padding-top: rem-calc(30px);}
+    .col-right { display: none; }
+    .checkbox-list {
+      .group-checkbox.active {
+        .download-file { display: block;}
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .touch {
+    .pdf-viewer {
+      overflow: hidden;
+      padding: rem-calc(20px);
+      display: table;
+      width: 100%;
+      // .viewer-sm { display: block;}
+      .col-left,
+      .col-right {
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .col-right {
+        float: none;
+      }
+      .download-file {
+        .btn {
+          border-bottom: 0;
+          .icon {
+            font-size: rem-calc(34px);
+            display: block;
+            margin-bottom: rem-calc(10px);
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@media #{$screen-sm-up} {
+  .pdf-viewer {
+    padding: rem-calc(30px);
+    border: 1px solid $gray-1;
+    border-top: 0;
+    .col-left {
+      width: 50%;
+      border-right: 0;
+    }
+    .col-right {
+      width: 50%;
+      border: 1px solid $gray-1;
+      background-color: $gray-2;
+    }
+    .checkbox-list {
+      .checkbox-custom {
+        &:before {
+          left: auto;
+          bottom: auto;
+          right: rem-calc(-14px);
+          top: 50%;
+          margin-top: rem-calc(-5px);
+          margin-bottom: 0;
+          transform: rotate(90deg);
+        }
+      }
+    }
+    .checkbox-list {
+      .active {
+        .download-file { display: none;}
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .no-touch {
+    .pdf-viewer {
+      overflow: hidden;
+      position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: percentage(405px/1170px);
+          bottom: rem-calc(30px);
+          top: rem-calc(30px);
+          width: 1px;
+          background-color: $gray-1;
+        }
+      .col-left {
+        width: percentage(376px/1110px);
+        float: left;
+      }
+      .col-right {
+        width: percentage(734px/1110px);
+        float: none;
+        margin-left: percentage(376px/1110px);
+        border-bottom: 0;
+        border-left: 0;
+      }
+      .viewer-bottom {
+        margin-top: -1px;
+        border-bottom: 0;
+        border-top: 1px solid $gray-1;
+      }
+      .viewer-container {
+        overflow: auto;
+        .viewer-md {
+          display: block;
+          margin-top: -1px;
+          position: relative;
+          z-index: 1;
+        }
+      }
+      .documents-frame {
+        width: 100%;
+        height: rem-calc(652px);
+        border: 0;
+        display: block;
+      }
+    }
+  }
+}

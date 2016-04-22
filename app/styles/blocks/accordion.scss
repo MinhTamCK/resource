@@ -1,0 +1,130 @@
+.collapse-block {
+  padding-bottom: rem-calc(45px);
+}
+.collapse-wrap {
+  border-top: 1px solid $gray-1;
+  &:last-child {
+    border-bottom: 1px solid $gray-1;
+  }
+  .collapse-heading {
+    position: relative;
+    padding: rem-calc(25px 30px 15px 0);
+    font-family: $font-inpi-bold;
+    font-size: rem-calc(15px);
+    overflow: hidden;
+  }
+  .collapse-control {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: rem-calc(24px);
+    height: rem-calc(24px);
+    margin-top: rem-calc(-12px);
+    font-family: $icons-font;
+    font-size: rem-calc(10px);
+    color: $orange-1;
+    text-align: center;
+    border: 1px solid $orange-1;
+    border-radius: 50%;
+    .no-touch &:hover, &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+    &:after {
+      content: "\f118";
+      display: block;
+      margin-top: rem-calc(4px);
+    }
+    &.collapsed:after {
+      content: "\f124";
+    }
+  }
+}
+.panel-custom-group {
+  margin-top: 15px;
+  border: 1px solid $gray-1;
+  border-top: none;
+  .panel-heading {
+    position: relative;
+    padding: rem-calc(20px 30px);
+    font-family: $font-inpi-bold;
+    border-top: 1px solid $gray-1;
+    border-radius: 0;
+  }
+  .panel-title {
+    font-size: rem-calc(15px);
+    line-height: 1.2;
+    overflow: hidden;
+  }
+  .acc-control {
+    float: right;
+    line-height: 1;
+    .no-touch &:hover, &:focus {
+      text-decoration: none;
+      outline: none;
+    }
+    &:before {
+      content: attr(data-title-show);
+    }
+    .icon-up {
+      margin-left: rem-calc(10px);
+      font-family: $icons-font;
+      font-size: rem-calc(10px);
+    }
+    &.collapsed {
+      &:before {
+        content:  attr(data-title-hide);
+      }
+      .icon-up {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .panel-body {
+    padding: rem-calc(0 30px 30px);
+    font-family: $font-inpi-regular;
+    font-size: rem-calc(15px);
+  }
+}
+@media #{$screen-xs-only} {
+  .panel-custom-group {
+    .panel-title {
+      padding-right: rem-calc(30px);
+    }
+    .panel-heading,
+    .panel-body {
+      padding-left: rem-calc(18px);
+      padding-right: rem-calc(18px);
+    }
+    .panel-heading .acc-control {
+      &:before {
+        content: "";
+      }
+      .icon-up {
+        margin-left: 0;
+        font-size: rem-calc(8px);
+      }
+    }
+  }
+}
+
+@media #{$screen-sm-up} {
+  .equa-col {
+    > div:nth-child(2n+1) {
+      clear: left;
+    }
+  }
+}
+@media #{$screen-md-up} {
+  .equa-col {
+    > div {
+      &:nth-child(2n+1) {
+        clear: none;
+      }
+      &:nth-child(3n+1) {
+        clear: left;
+      }
+    }
+  }
+}

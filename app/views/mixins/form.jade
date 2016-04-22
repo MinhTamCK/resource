@@ -1,0 +1,63 @@
+mixin select(opts, name, id)
+  select(name=name, id=id?id:name)&attributes(attributes)
+    -each opt in opts
+      option(value=opt.value)!=opt.value
+mixin cus-select(items)
+  .custom-select(data-custom-select)&attributes(attributes)
+    +select(items.opts, items.name, items.id)
+
+//- Form
+mixin form(opts)
+  form(action=opts.action ? opts.action : '#',
+    method=opts.method ? opts.method : 'post',
+    name=opts.name ? opts.name : opts.name = opts.id,
+    id=opts.id ? opts.id : opts.name)&attributes(attributes)
+    if block
+      block
+
+//- Input
+mixin input(opts)
+  -if(typeof(opts.id) === 'undefined') opts.id = opts.name
+  label(for=opts.id, class=opts.clasLabel)!= opts.textLabel
+  input(type=opts.type ? opts.type : 'text',
+    name=opts.name ? opts.name : opts.name = opts.id,
+    class=opts.class,
+    id=opts.id ? opts.id : opts.name,
+    value=opts.value,
+    checked=opts.checked,
+    title=opts.title,
+    required=opts.required,
+    min=opts.min,
+    max=opts.max,
+    data-error=opts.error,
+    placeholder=opts.placeholder)&attributes(attributes)
+
+//- Button
+mixin button(opts)
+  - if(typeof(opts.title) === 'undefined') opts.title = opts.name
+  button(type=opts.type,
+    name=opts.name ? opts.name : opts.name = opts.id,
+    id=opts.id ? opts.id : opts.name,
+    title=opts.title)&attributes(attributes)
+    if block
+      block
+
+//- radio custom
+mixin radio-custom (opts)
+  -if(typeof(opts.id) === 'undefined') opts.id = opts.name
+  -if(typeof(opts.checked) === 'undefined') opts.checked = false
+  .radio-custom&attributes(attributes)
+    input(name=opts.name, id=opts.id, type="radio", checked=opts.checked)
+    label(for=opts.id).label-control!=opts.textLabel
+      if block
+        block
+
+//- checkbox custom
+mixin checkbox-custom (opts)
+  -if(typeof(opts.id) === 'undefined') opts.id = opts.name
+  -if(typeof(opts.checked) === 'undefined') opts.checked = false
+  .checkbox-custom&attributes(attributes)
+    input(name=opts.name, id=opts.id, type="checkbox", checked=opts.checked, data-checkbox-download=opts.data)
+    label(for=opts.id).label-control!=opts.textLabel
+    if block
+      block

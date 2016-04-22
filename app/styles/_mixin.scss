@@ -1,0 +1,66 @@
+@import "libs/bootstrap/mixins";
+
+// Usage
+// @include border-radius() - default is 50%
+// @include border-radius(20px) - all border is 20px
+// @include border-radius(5px null 20px) - top left and bottom left border
+// @include border-radius(null null 20px) - bottom left border
+@mixin border-radius($radius: 50%) {
+  $values: length($radius);
+  $positions: top-left top-right bottom-left bottom-right;
+  @if $values == 1 {
+    @for $i from 1 through length($positions) {
+      $position: nth($positions, $i);
+      border-#{$position}-radius: $radius;
+    }
+  } else {
+    @for $i from 1 through $values {
+      @if nth($radius, $i) != null {
+        $position: nth($positions, $i);
+        border-#{$position}-radius: $radius;
+      }
+    }
+  }
+}
+// Placeholder text
+@mixin placeholder($color: $gray-3) {
+  &:-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+}
+
+// Keyframes
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} { @content; }
+  @keyframes #{$name} { @content; }
+}
+
+// Font face
+// Usage
+// 1. Create new variables for fonts name. ex: $var1:...; $var2:...;
+// 2. Call by @include font-faces($var1 $var2)
+@mixin font-faces($names) {
+  $values: length($names);
+  @for $i from 1 through $values {
+    $name: nth($names, $i);
+    @font-face {
+      font-family: $name;
+      src: url('../fonts/#{$name}.woff2') format('woff2'),
+        url('../fonts/#{$name}.woff') format('woff'),
+        url('../fonts/#{$name}.ttf')  format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+  }
+}

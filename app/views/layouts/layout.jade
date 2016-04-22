@@ -1,0 +1,36 @@
+include ../mixins/all
+
+block vars
+  -title = 'Site'
+  -bodyClass = ''
+
+doctype html
+//[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
+//[if gt IE 9]><!
+html(class="no-js", lang="en")
+  //<![endif]
+  head
+    meta(charset="utf-8")
+    //[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]
+    title=title
+    meta(name="description", content="")
+    meta(name="keywords", content="")
+    meta(name="robots", content="index, follow")
+    meta(name="author", content="")
+    meta(name="viewport", content="width=device-width, minimal-ui, minimum-scale=1.0,  maximum-scale=1.0, user-scalable=no")
+    link(rel="icon", href="favicon-16x16.png", type="image/x-icon", sizes="16x16")
+    link(rel="stylesheet", href="css/libs.css")
+    link(rel="stylesheet", href="css/style.css")
+    //[if lte IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]
+    link(rel="stylesheet", href="css/print.css", media="print")
+    script(src="js/modernizr.js")
+    block script
+  body(class=bodyClass)
+    //- include ../blocks/sticky-nav
+    include ../blocks/header
+    //- include ../blocks/top-banner
+    main: .container-fluid
+      block container
+    include ../blocks/script
+    include ../blocks/footer
+    noscript JavaScript is off. Please enable to view full site.

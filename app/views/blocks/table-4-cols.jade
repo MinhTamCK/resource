@@ -1,0 +1,20 @@
+.ig-table(data-ajax-table='data/data-table.html')
+  p.hint-text Cherchez des indications géographiques en saisissant par exemple un nom d'indication, un nom de département ou de commune, un code postal, un numéro de demande ou d'homologation.
+  include tool-box
+  .table-responsive.visible-md-up: +table(
+    [
+      {link: {title: 'Nom de l’indication géographique', href:'javascript:void(0)'}},
+      {link: {title: 'N° d’homologation', href:'javascript:void(0)'}},
+      {link: {title: 'Date de dépôt', href:'javascript:void(0)'}},
+      {link: {title: 'Date de dépôt', href:'javascript:void(0)'}}
+    ],
+    [
+      ['<a title="géographique3" href="detail-description.html" class="title grey">géographique3</a>', '13/05/2014', 'IG 15-003', '<span class="status">Enquête publique<span class="icon icon-ok"></span></span>'],
+      ['<a title="géographique3" href="detail-description.html" class="title">géographique3</a>', '13/05/2014', 'IG 15-003', '<span class="status">Enquête publique<span class="icon icon-ok"></span></span>'],
+      ['<a title="géographique3" href="detail-description.html" class="title">géographique3</a>', '13/05/2014','IG 15-003', '<span class="status">Enquête publique<span class="icon icon-ok"></span></span>'],
+      ['<a title="géographique3" href="detail-description.html" class="title">géographique3</a>', '13/05/2014','IG 15-003', '<span class="status">Enquête publique<span class="icon icon-ok"></span></span>'],
+      ['<a title="géographique3" href="detail-description.html" class="title">géographique3</a>', '13/05/2014','IG 15-003', '<span class="status">Enquête publique<span class="icon icon-ok"></span></span>']
+    ]
+  ).table.table-layout-fixed
+  include table-mobile
+  include tool-box-bottom

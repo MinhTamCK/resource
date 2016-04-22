@@ -1,0 +1,16 @@
+.visible-sm-up,
+.visible-md-up {
+  display: none !important;
+}
+@media (min-width: $screen-sm-min) {
+  @include responsive-visibility('.visible-sm-up');
+}
+@media (min-width: $screen-md-min) {
+  @include responsive-visibility('.visible-md-up');
+}
+@media (min-width: $screen-sm-min) {
+  @include responsive-invisibility('.hidden-sm-up');
+}
+@media (min-width: $screen-md-min) {
+  @include responsive-invisibility('.hidden-md-up');
+}

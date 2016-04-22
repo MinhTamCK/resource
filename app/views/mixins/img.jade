@@ -1,0 +1,4 @@
+mixin img(opts)
+  -opts.src = opts.src||'images/transparent.png'
+  -opts.alt = opts.alt||''
+  img(src=opts.src, alt=opts.alt)&attributes(opts.attr||attributes)

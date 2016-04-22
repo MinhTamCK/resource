@@ -1,0 +1,10 @@
+.table-group(data-sort-table='{"listIG": [{"titleName": "test1","link": {"url": "detail-description.html","title": "test1","pub_inquiry_open_date":1447606800,"text": "test1"},"titleDate": "test1","date": "12/1/2000"},{"titleName": "test2","link": {"url": "detail-description.html","title": "test2","text": "test2"},"titleDate": "test2","date": "12/1/1000"}]}')
+  .table-responsive.visible-sm-up: +table(
+    [
+      {link: {title: 'Nom de l’indication géographique', href:'javascript:void(0)'}},
+      {link: {title: 'N° d’homologation', href:'javascript:void(0)'}}
+    ],
+    []
+  ).table.table-layout-fixed
+
+  include table-mobile-col-2

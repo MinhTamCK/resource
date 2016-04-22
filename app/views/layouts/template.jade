@@ -1,0 +1,35 @@
+include ../mixins/all
+
+block vars
+  -title = 'Template'
+
+doctype html
+html(class="no-js", lang="en")
+  head
+    meta(charset="utf-8")
+    title=title
+    meta(name="viewport", content="width=device-width, minimal-ui")
+    link(rel="icon", href="favicon-16x16.png", type="image/x-icon", sizes="16x16")
+    link(rel="stylesheet", href="css/libs.css")
+    link(rel="stylesheet", href="css/style.css")
+    //[if lte IE 9]><link rel="stylesheet" href="css/ie.css"><![endif]
+    link(rel="stylesheet", href="css/print.css", media="print")
+    style.
+      .template {padding-top: 70px;}
+      .template .container-fluid {max-width: none;}
+      h2.title-template {margin: 20px 0; border-bottom: 1px solid #ccc; font-weight: normal;}
+      .template .color-item {padding: 5px; border: 1px solid #ccc; margin-bottom: 15px;}
+      .template .color-item .view {height: 30px; margin-bottom: 10px; border: 1px solid #f1f1f1;}
+      .template .color-item .color-name {white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+      .template .icon-item {text-align: center; margin-bottom: 15px;}
+      .template .icon-item .view {display: inline-block;}
+      .template .icon-item .icon-name {white-space: nowrap; text-overflow: ellipsis; overflow: hidden; margin-top: 10px;}
+      .template .icon {font-size: 30px;}
+      .template .text {font-size: 30px;}
+      .template .btn-viewer .view {display: block; margin-top: 10px;}
+      template #custom {padding-bottom: 50px;}
+    script(src="js/modernizr.js")
+  body.template
+    block container
+    include ../blocks/script
+    noscript JavaScript is off. Please enable to view full site.

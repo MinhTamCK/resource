@@ -1,0 +1,90 @@
+.pdf-viewer
+  .col-left
+    ul.list-unstyled.checkbox-list#list-doc
+      li
+        h3.title-4 Cahier(s) des charges
+        .group-checkbox
+          +checkbox-custom({name: 'ckb-pecifications', data:'data-checkbox-download'})
+            +link({title: 'Homologué le 08/08/2014', href: 'javascript:void(0)',attr:{'data-render-pdf':'/data/compressed.tracemonkey-pldi-09.pdf#page=1'}})
+              strong Homologué&nbsp;
+              |08/08/2014
+          .download-file
+            +link({title: 'download-file', href: 'javascript:void(0)'}).btn.btn-icon
+              span.icon.icon-file
+              span.text Télécharger
+      li
+        h3.title-4 BOPI
+        .group-checkbox
+          +checkbox-custom({name: 'ckb-bopi',data:'data-checkbox-download'})
+            +link({title: 'Homologué le 08/08/2014', href: 'javascript:void(0)',attr:{'data-render-pdf':'/data/cdc_ep_ig 15-002_savon-de-marseille_1543.pdf#page=1'}})
+              strong Homologué&nbsp;
+              |08/08/2014
+          .download-file
+            +link({title: 'download-file', href: 'javascript:void(0)'}).btn.btn-icon
+              span.icon.icon-file
+              span.text Télécharger
+        .group-checkbox
+          +checkbox-custom({name: 'test1'})
+            +link({title: 'test 1 le 08/08/2014', href: 'javascript:void(0)',attr:{'data-render-pdf':'/data/cdc_ep_ig 15-002_savon-de-marseille_1543.pdf#page=2'}})
+              strong Test 1&nbsp;
+              |08/08/2014
+          .download-file
+            +link({title: 'download-file', href: 'javascript:void(0)'}).btn.btn-icon
+              span.icon.icon-file
+              span.text Télécharger
+        .group-checkbox
+          +checkbox-custom({name: 'test2'})
+            +link({title: 'test 2 le 08/08/2014', href: 'javascript:void(0)',attr:{'data-render-pdf':'/data/cdc_ep_ig 15-002_savon-de-marseille_1543.pdf#page=3'}})
+              strong Test 2&nbsp;
+              |08/08/2014
+          .download-file
+            +link({title: 'download-file', href: 'javascript:void(0)'}).btn.btn-icon
+              span.icon.icon-file
+              span.text Télécharger
+      li
+        h3.title-4 Synthèse d’enquêtes publiques
+        .group-checkbox
+          +checkbox-custom({name: 'ckb-inquiries'})
+            +link({title: 'Homologué le 08/08/2014', href: 'detail-documents.html',attr:{'data-render-pdf':'/data/compressed.tracemonkey-pldi-09.pdf#page=1'}})
+              strong Homologué&nbsp;
+              |08/08/2014
+          .download-file
+            +link({title: 'download-file', href: 'javascript:void(0)'}).btn.btn-icon
+              span.icon.icon-file
+              span.text Télécharger
+  .col-right
+    //- .viewer-block.visible-md-up
+      span.name-pdf
+      .button-center
+        +link({title: 'Previous', attr: {class: 'icon icon-previous'}})
+        +button({title: 'Previous', name: 'btn-previous'}).btn.btn-previous
+        +button({title: 'next', name: 'btn-next'}).btn.btn-next
+        +link({title: 'next', attr: {class: 'icon icon-next'}})
+      .button-right
+        .pagination-block
+          form.form-pagination(method="post", action="#", name="form-pagination")
+            +input({textLabel: 'pagination', clasLabel: 'hidden', id:'inp-pagination-1', class: 'form-control', value: '1',name:'inp-pagination-pdf'})
+          span.total-number
+        +button({title: 'Print', name: 'btn-Print'}).btn.btn-print
+        +button({title: 'Large View', name: 'btn-largeview'}).btn.btn-largeview
+    .viewer-container
+      .viewer-md
+        iframe(class="documents-frame" allowfullscreen="" src="pdfjs/web/viewer.html" id="iframe-documents")
+      .viewer-sm
+        .download-file
+          +link({title: 'download-file', href: 'javascript:void(0)'}).btn.btn-icon
+            span.icon.icon-file
+            span.text Télécharger
+    //- .viewer-block.viewer-bottom.visible-md-up
+      .button-center
+        +link({title: 'Previous', attr: {class: 'icon icon-previous'}})
+        +button({title: 'Previous', name: 'btn-previous', id: 'btn-previous-bottom'}).btn.btn-previous
+        +button({title: 'next', name: 'btn-next', id: 'btn-next-bottom'}).btn.btn-next
+        +link({title: 'next', attr: {class: 'icon icon-next'}})
+      .button-right
+        .pagination-block
+          form.form-pagination(method="post", action="#", name="form-pagination")
+            +input({textLabel: 'pagination', clasLabel: 'hidden', id:'inp-pagination-2', class: 'form-control', value: '1',name:'inp-pagination-pdf'})
+          span.total-number
+        +button({title: 'Print', name: 'btn-print', id: 'btn-print-bottom'}).btn.btn-print
+        +button({title: 'Large View', name: 'btn-largeview', id: 'btn-largeview-bottom'}).btn.btn-largeview

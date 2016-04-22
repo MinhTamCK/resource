@@ -1,0 +1,34 @@
+.help-block
+  +form({id: 'search-help', action: '#', method: 'get', name: 'search-help'})
+    .search-block
+      +text-hint('Cherchez des indications géographiques en saisissant par exemple un nom d\'indication, un nom de département ou de commune, un code postal, un numéro de demande ou d\'homologation.').hint-text
+      .row
+        .form-group
+          .col-md-9.lable-help-search
+            label(for="input-search-help").label-control Recherche dans l'aide:
+          .col-md-3.pull-right
+            .input-group
+              input(type="text", id="input-search-help", name="input-search-help").form-control
+              span.input-group-btn
+                +button({type: 'submit', name:'button-search', title: 'Search'}).btn.btn-icon.revert
+                  span.icon.icon-search
+                  span.sr-only Search
+  .help-container
+    .row
+      .col-sm-8.col-md-8
+        if(helps)
+          include help-content
+        if(helpResult)
+          include help-results
+      .col-sm-4.col-md-4
+        .help-filter
+          h2.title-1 Filtrer par thème
+          +list-group([
+            {name: 'filter-1', text: 'Couverture ', href: 'javscript:void(0);', bagde: '(1)', itemCls: 'active'},
+            {name: 'filter-2', text: 'Navigation dans la base de données ', href: 'javscript:void(0);', bagde: '(1)'},
+            {name: 'filter-3', text: 'Utilisation du moteur de recherche ', href: 'javscript:void(0);', bagde: '(1)'},
+            {name: 'filter-4', text: 'Utilisation des différentes listes d\'IG ', href: 'javscript:void(0);', bagde: '(1)'},
+            {name: 'filter-5', text: 'Présentation des notices ', href: 'javscript:void(0);', bagde: '(1)'},
+            {name: 'filter-6', text: 'A propos des formulaires d\'observations ', href: 'javscript:void(0);', bagde: '(1)'},
+            {name: 'filter-7', text: 'Mise à jour ', href: 'javscript:void(0);', bagde: '(1)'}
+          ]).list-group-1

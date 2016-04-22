@@ -1,0 +1,60 @@
+footer.main-footer.hidden-print
+  .footer-top: .container-fluid
+    +link({title: 'Inpi', href: 'index.html'}).logo-footer
+      +img({src: 'images/logo-footer.png', alt: 'Inpi'})
+    .site-map
+      +link({title: 'Contactez-nous'}).title-contact.visible-xs
+      .row
+        .item.col-md-3.col-sm-6
+          .site-map-links
+            h2.title Partager l’innovation
+            ul.link-list.list-unstyled
+              li: +link({title: 'Rau de partenaires'})
+              li: +link({title: 'Espace Presse'})
+              li: +link({title: 'Ressources BOPI'})
+              li: +link({title: 'Observatoire de l’innovation'})
+              li: +link({title: 'Actualités et colloque'})
+        .item.col-md-3.col-sm-6
+          .site-map-links
+            h2.title Garantir la qualité de service
+            ul.link-list.list-unstyled
+              li: +link({title: 'Démarche Qualité ISO 9001'})
+              li: +link({title: 'Gouvernance INPI'})
+              li: +link({title: 'Recrutement'})
+        .item.col-md-3.col-sm-6
+          .site-map-links
+            h2.title Accompagner les innovateurs
+            ul.link-list.list-unstyled
+              li: +link({title: 'L’INPI en France et à l’international'})
+              li: +link({title: 'Lutter contre la contrefaçon'})
+              li: +link({title: 'Offres de formation et de coaching INPI'})
+        .item.col-md-3.col-sm-6
+          .site-map-links
+            h2.title Concevoir aujourd’hui et demain
+            ul.link-list.list-unstyled
+              li: +link({title: 'Rapport annuel 2013'})
+              li: +link({title: 'Contrat d’objectif et de performance 2013-2016'})
+              li: +link({title: 'L’histoire de l’INPI'})
+  p.link-contact.hidden-xs INPI , l’Institut National de la Propriété Industrielle 15 rue des Minimes - CS50001 - 92677 Courbevoie Cedex&nbsp;
+    +link({title: 'Contactez-nous'})
+  .footer-bottom: .container-fluid
+    ul.social-list.list-unstyled.pull-right
+      li
+        +link({title: 'Facebook'})
+          span.icon.icon-facebook
+      li
+        +link({title: 'Twitter'})
+          span.icon.icon-twitter
+      li
+        +link({title: 'Linkedin'})
+          span.icon.icon-linkedin
+    //- .menu-footer
+      h2.title-menu.visible-xs Plus de liens
+      nav.hidden-xs
+        +link({title: 'Newsletter'})
+        +link({title: 'Plan du site'})
+        +link({title: 'Réutilisation des données publiques'})
+        +link({title: 'Mentions légales'})
+        +link({title: 'Accessibilité'})
+        +link({title: 'Informations sur les cookies'})
+        +link({title: 'Liens utiles'})

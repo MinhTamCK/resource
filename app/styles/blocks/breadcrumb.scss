@@ -1,0 +1,33 @@
+.breadcrumb {
+  background-color: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  a, > .active {
+    color: $white;
+    font-size: rem-calc(14px);
+    font-family: $font-inpi-thin;
+  }
+  a {
+    .no-touch &:hover {
+      text-decoration: underline;
+    }
+  }
+  li {
+    position: relative;
+    padding-right: rem-calc(20px);
+    + li:before {
+      content: "\f129";
+      position: absolute;
+      top: 50%;
+      left: rem-calc(-15px);
+      margin-top: -3px;
+      font-family: $icons-font;
+      font-size: rem-calc(6px);
+      padding: 0;
+    }
+  }
+  > .active {
+    padding-right: 0;
+    color: $white;
+  }
+}
