@@ -1,5 +1,34 @@
 .main-footer {
-  background-color: $inpi-blue;
+  color : $white;
+  .idea-customer {
+    height: 256px;
+    color: $black;
+    background-color : #fff0f1;
+    .idea-header {
+      height: 100%;
+      padding: 83px 0;
+    }
+    .text-block {
+      border-left: 7px solid #ec1d25;
+      padding-left: 10px;
+    }
+    .idea-text {
+      font-size: 2em;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .footer-top {
+    background-color: #242424;
+  }
+  .footer-bottom {
+    background-color: #a6a9b0;
+    height: 42px;
+    .social-list {
+      line-height: 41px;
+    }
+  }
   .logo-footer {
     display: inline-block;
     margin: rem-calc(26px 0 30px);

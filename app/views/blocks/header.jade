@@ -9,7 +9,7 @@ header
             span.icon-bar
             span.icon-bar
           a.navbar-brand(href='#')
-            img(src='images/spa-logo.png')
+            img(src='images/spa-logo.png', alt='spa-logo')
         #navbar.collapse.navbar-collapse
           ul.nav.navbar-nav
             li.active
@@ -18,48 +18,3 @@ header
               a(href='#about') About    
             li
               a(href='#contact') Contact
-
-//- header.main-header.hidden-print: .container-fluid
-//-   +link({title: 'Inpi', href: 'index.html'}).logo
-//-     +img({src: 'images/logo-inpi.png', alt: 'Inpi'})
-//-   .main-menu
-//-     nav.navbar.navbar-default
-//-       .navbar-header
-//-         +button-menu()
-//-       #main-nav.main-nav.collapse.navbar-collapse
-//-         ul.nav.navbar-nav
-//-           li.active
-//-             +link-text({text: 'comprendre', href: '#mega-menu-1'})(role="button", data-toggle="collapse", aria-expanded="false", aria-controls="mega-menu-1")
-//-               span.text-small la propriété industrielle
-//-             #mega-menu-1.mega-menu.collapse: .container-fluid
-//-               +subNav()
-
-//-           li
-//-             +link-text({text: 'protéger', href: '#mega-menu-2'})(role="button", data-toggle="collapse", aria-expanded="false", aria-controls="mega-menu-2")
-//-               span.text-small vos innovations
-//-             #mega-menu-2.mega-menu.collapse: .container-fluid
-//-               +subNav()
-//-           li
-//-             +link-text({text: 'valoriser', href: '#mega-menu-3'})(role="button", data-toggle="collapse", aria-expanded="false", aria-controls="mega-menu-3")
-//-               span.text-small vos actifs
-//-             #mega-menu-3.mega-menu.collapse: .container-fluid
-//-               +subNav()
-//-           li
-//-             +link-text({text: 'Innover', href: '#mega-menu-4'})(role="button", data-toggle="collapse", aria-expanded="false", aria-controls="mega-menu-4")
-//-               span.text-small ensemble
-//-             #mega-menu-4.mega-menu.collapse: .container-fluid
-//-               +subNav()
-//-         .navbar-right.menu-right
-//-           ul.list-unstyled.list-user
-//-             li
-//-               +link({title: 'Search'})
-//-                 span.icon.icon-search
-//-             li
-//-               +link({title: 'Download file'})
-//-                 span.icon.icon-file
-//-             li
-//-               +link({title: 'User'})
-//-                 span.icon.icon-user
-//-                 sup.badge 2
-//-             li
-//-               +link({title: 'En', attr: {class: 'language'}})
