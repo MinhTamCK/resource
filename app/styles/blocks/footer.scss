@@ -1,3 +1,26 @@
+.slick-dots {
+    .slick-active {
+        button {
+            border-radius: 50px;
+            border: 1px solid #ff4f4f;
+            height: 10px;
+            width: 10px;
+            background: #ff4f4f;
+        }
+    }
+    li {
+        button {
+            border-radius: 50px;
+            border: 1px solid #ff4f4f;
+            height: 10px;
+            width: 10px;
+        }
+        button:before {
+            content: no-close-quote;
+        }
+    }
+}
+
 .main-footer {
     color: $white;
     .idea-customer {
@@ -290,6 +313,107 @@
         }
         .link-contact {
             text-align: right;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-footer {
+        .logo-footer {
+            max-width: 100%;
+            margin: 10px;
+            padding: 0;
+        }
+        .visible-xs {
+            display: block !important;
+        }
+        .hidden-xs{
+            display: none !important;
+        }
+        .mail{
+            text-align: center;
+            clear: both;
+        }
+        .footer-top {
+            .info-spa {
+                h2 {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+            ul {
+                font-size: 13px;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+        .idea-customer {
+            .slide-footer {
+                .idea-text {
+                     display: block;
+                    p {
+                        margin: 0;
+                        font-size: 11px;
+                    }
+                }
+                .image-slide-block {
+                    .img-circle {
+                        width: 125px;
+                    }
+                }
+                .slide-text {
+                    padding: 0 0;
+                    h3 {
+                        font-size: 25px;
+                        margin-top: 10px;
+                    }
+                    .visible-xs {
+                        display: block !important;
+                    }
+                }
+                .slick-dots {
+                    top: 125px !important;
+                    padding-left: 150px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .main-footer {
+        .idea-customer {
+            .slide-footer {
+                .image-slide-block {
+                    .img-circle {
+                        width: 55px;
+                    }
+                }
+                .slide-text {
+                    h3 {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-footer {
+        .idea-customer {
+            .slide-footer {
+                .slide-text {
+                    p {
+                        font-size: 12px;
+                    }
+                }
+                .slick-dots {
+                    top: 138px !important;
+                    padding-left: 100px !important;
+                }
+            }
         }
     }
 }
