@@ -1,0 +1,40 @@
+.row {
+  .slider {
+    .top-slider {
+      text-align: center;
+      .title {
+          padding: 30px 0 15px;
+          h2 {
+            font-family: sans-serif;
+            color: #ec1d25;
+            border-bottom: 1px solid;
+            display: inline;
+          }
+      }
+    }
+    .col-md-4 {
+      text-align: center;
+      .img-circle {
+        width: 100px;
+        height: 100px;
+        border: 5px solid #ebebeb;
+        position: inherit;
+        top: 50px;
+      }
+      .item-slider {
+        padding: 50px 30px 0;
+        border: 5px solid #ebebeb;
+        margin: 0 5px;
+      }
+      .item-slider-one {
+        background: #e4d0e5;
+      }
+      .item-slider-two {
+        background: #fad5e5;
+      }
+      .item-slider-three {
+        background: #fbd4c8;
+      }
+    }
+  }
+}
