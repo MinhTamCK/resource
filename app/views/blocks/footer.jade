@@ -1,42 +1,62 @@
 footer.main-footer.hidden-print
+  .idea-customer: .container-fluid
+    .idea-header.col-md-3
+      .text-block.idea-text
+        p  Ý KIẾN
+        p  KHÁCH HÀNG
+    .slide-footer.col-md-9
+      .single-slick
+        .item
+          .image-slide-block.col-md-4
+            img.img-circle(src='images/img-slide-footer.png', alt='img-slide-footer')
+          .slide-text.col-md-8
+            h3   Trần Thị Hoài An
+            p    Tinh dầu là một trong những loại tinh dầu thiên nhiên được chiết xuất hoàn
+                 | toàn từ vỏ bưởi ( phần vỏ xanh với những nốt nhỏ li ti)
+        .item
+          .image-slide-block.col-md-4
+            img.img-circle(src='images/img-slide-footer.png', alt='img-slide-footer')
+          .slide-text.col-md-8
+            h3   Nguyen Thi A
+            p    Tinh dầu là một trong những loại tinh dầu thiên nhiên được chiết xuất hoàn
+                 | toàn từ vỏ bưởi ( phần vỏ xanh với những nốt nhỏ li ti)
+        .item
+          .image-slide-block.col-md-4
+            img.img-circle(src='images/img-slide-footer.png', alt='img-slide-footer')
+          .slide-text.col-md-8
+            h3   Nguyen Hoang Thuy Linh
+            p    Tinh dầu là một trong những loại tinh dầu thiên nhiên được chiết xuất hoàn
+                 | toàn từ vỏ bưởi ( phần vỏ xanh với những nốt nhỏ li ti)
+
   .footer-top: .container-fluid
-    +link({title: 'Inpi', href: 'index.html'}).logo-footer
-      +img({src: 'images/logo-footer.png', alt: 'Inpi'})
-    .site-map
-      +link({title: 'Contactez-nous'}).title-contact.visible-xs
+    .image-spa.col-md-2
+      +link({title: 'Inpi', href: 'index.html'}).logo-footer
+        +img({src: 'images/spa-logo-footer.png', alt: 'spa-logo'})  
+    .info-spa
+      h2 Viện Thẩm Mỹ Quốc Tế Dencos Luxury
       .row
         .item.col-md-3.col-sm-6
-          .site-map-links
-            h2.title Partager l’innovation
-            ul.link-list.list-unstyled
-              li: +link({title: 'Rau de partenaires'})
-              li: +link({title: 'Espace Presse'})
-              li: +link({title: 'Ressources BOPI'})
-              li: +link({title: 'Observatoire de l’innovation'})
-              li: +link({title: 'Actualités et colloque'})
+          ul.link-list.list-unstyled
+            li Cơ sở chính:559-561 Trần Hưng Đạo,P.Cầu Kho,Q.1.HCM
+            li Tel:+84(0)8.710.96.999 - Mobile:+84.906.8888.36
+            li Chi nhánh Hà Nội:135-137 Bùi Thị Xuân, Quận Hai Bà Trưng, Hà Nội
+            li Tel:+04.6689.2299 - Mobile:+84.902.8888
+            li Website:www.dencosluxury.com
         .item.col-md-3.col-sm-6
-          .site-map-links
-            h2.title Garantir la qualité de service
-            ul.link-list.list-unstyled
-              li: +link({title: 'Démarche Qualité ISO 9001'})
-              li: +link({title: 'Gouvernance INPI'})
-              li: +link({title: 'Recrutement'})
+          ul.link-list.list-unstyled
+            li Chi nhánh Vũng Tàu:227A Lê Hồng Phong,P8,TP.Vũng Tàu
+            li Tel:+846.435.45.855 - Mobile:+84.906.8888.36
+            li Chi nhánh Cần Thơ:357 đường 30/4,P.Hưng Lợi,Q.Ninh Kiều, TP.Cần Thơ
+            li Tel:+847.106.284.999
+            li Email:tuvan@dencosluxury.com
         .item.col-md-3.col-sm-6
-          .site-map-links
-            h2.title Accompagner les innovateurs
+          nav
             ul.link-list.list-unstyled
-              li: +link({title: 'L’INPI en France et à l’international'})
-              li: +link({title: 'Lutter contre la contrefaçon'})
-              li: +link({title: 'Offres de formation et de coaching INPI'})
-        .item.col-md-3.col-sm-6
-          .site-map-links
-            h2.title Concevoir aujourd’hui et demain
-            ul.link-list.list-unstyled
-              li: +link({title: 'Rapport annuel 2013'})
-              li: +link({title: 'Contrat d’objectif et de performance 2013-2016'})
-              li: +link({title: 'L’histoire de l’INPI'})
-  p.link-contact.hidden-xs INPI , l’Institut National de la Propriété Industrielle 15 rue des Minimes - CS50001 - 92677 Courbevoie Cedex&nbsp;
-    +link({title: 'Contactez-nous'})
+              li Trang chủ
+              li Liên hệ
+              li Giới thiệu
+          img(src='images/dmca-protected.png', alt='dmca-protected')
+          p Tất cả các phẫu thuật và gây mê đều thực hiện tại Bệnh viện
   .footer-bottom: .container-fluid
     ul.social-list.list-unstyled.pull-right
       li
@@ -48,13 +68,6 @@ footer.main-footer.hidden-print
       li
         +link({title: 'Linkedin'})
           span.icon.icon-linkedin
-    //- .menu-footer
-      h2.title-menu.visible-xs Plus de liens
-      nav.hidden-xs
-        +link({title: 'Newsletter'})
-        +link({title: 'Plan du site'})
-        +link({title: 'Réutilisation des données publiques'})
-        +link({title: 'Mentions légales'})
-        +link({title: 'Accessibilité'})
-        +link({title: 'Informations sur les cookies'})
-        +link({title: 'Liens utiles'})
+      li
+        +link({title: 'pinterest'})
+          span.icon.icon-sharing
