@@ -1,14 +1,41 @@
  .contact-block {
-  padding: 9px 0;
-  .image-block {
-    display: inline-block;
-    margin-right: 22px;
-    img {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  .text-block {
-    display: inline-block;
-  }
+     margin-bottom: 10px;
+     .image-block {
+         float: left;
+         margin-right: 22px;
+         img {
+             width: 100px;
+             height: 100px;
+         }
+     }
+     .text-block {
+         float: left;
+         padding-top: 20px;
+         p {
+             margin: 0;
+         }
+     }
+ }
+ 
+ .contact-top {
+     margin-top: 66px;
+ }
+ 
+ .contact-bottom {
+     margin-bottom: 66px;
+ }
+ 
+ .map_container {
+     height: 411px;
+     position: relative;
+     width: 100%;
+     .map_canvas {
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         margin: 0;
+         padding: 0;
+     }
  }
