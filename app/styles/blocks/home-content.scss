@@ -61,3 +61,40 @@
     }
   }
 }
+.row {
+  .bottom-content {
+    font-family: sans-serif;
+    text-align: center;
+    .title {
+      padding: 40px 0 30px;
+      h2 {
+        font-family: sans-serif;
+        color: #ec1d25;
+        border-bottom: 1px solid;
+        display: inline;
+      }
+    }
+    .col-md-6 {
+      .item-content {
+        text-align: left;
+        padding: 15px;
+        h4 {
+          color: #ec1d25;
+        }
+        p {
+          line-height: 30px;
+        }
+        ul {
+          padding: 0px;
+          list-style-type: none;
+          li::before {
+            float: left;
+            font-family: 'Glyphicons Halflings';
+            content: "+";
+            padding-right: 3px;
+          }
+        }
+      }
+    }
+  }
+}
