@@ -44,6 +44,7 @@
     "grunt-jadelint": "^0.1.2",
     "grunt-markdown-pdf": "^3.0.0",
     "grunt-nodemon": "^0.4.0",
+    "gulp-sass": "^2.3.1",
     "time-grunt": "^1.2.1"
   },
   "keywords": [
