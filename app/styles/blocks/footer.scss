@@ -319,6 +319,9 @@
 
 @media screen and (max-width: 768px) {
     .main-footer {
+        .social-list {
+            padding: 0;
+        }
         .logo-footer {
             max-width: 100%;
             margin: 10px;
