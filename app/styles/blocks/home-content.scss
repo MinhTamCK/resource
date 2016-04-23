@@ -1,5 +1,6 @@
 .row {
   .slider {
+    font-family: sans-serif;
     .top-slider {
       text-align: center;
       .title {
@@ -34,6 +35,28 @@
       }
       .item-slider-three {
         background: #fbd4c8;
+      }
+    }
+  }
+}
+.row {
+  .top-content {
+    font-family: sans-serif;
+    text-align: center;
+    .title {
+      padding: 40px 0 30px;
+      h2 {
+        font-family: sans-serif;
+        color: #ec1d25;
+        border-bottom: 1px solid;
+        display: inline;
+      }
+    }
+    .content {
+        padding: 20px 27px;
+        text-align: left;
+        p.title-item {
+          font-weight: bold;
       }
     }
   }
