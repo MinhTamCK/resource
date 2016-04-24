@@ -26,3 +26,40 @@
         }
     }
 }
+
+.navbar-toggle {
+    margin: 20px 0;
+    .icon-bar {
+        background-color: $black;
+    }
+}
+
+@media #{$screen-xs-only} {
+    .navbar {
+        .navbar-nav {
+            margin: 0;
+            background-color: #101010;
+            z-index: 1;
+            li {
+                a {
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$screen-sm-only} {
+    .navbar {
+        .navbar-nav {
+            margin: 0;
+            background-color: #101010;
+            z-index: 1;
+            li {
+                a {
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+}

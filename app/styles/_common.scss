@@ -226,9 +226,14 @@ a {
     }
 }
 
-@media #{$screen-sm-up} {
-    .information-block {
-        min-height: rem-calc(116px);
-        margin-bottom: rem-calc(45px);
+@media #{$screen-xs-only} {
+    .bounce-up {
+        min-height: 320px;
+    }
+}
+
+@media #{$screen-sm-only} {
+    .bounce-up {
+        min-height: 320px;
     }
 }
