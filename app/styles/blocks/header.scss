@@ -5,9 +5,14 @@
     opacity: 0.7;
     margin-bottom: 0;
     border: none;
-    position: absolute;
-    top: 27px;
+    // position: absolute;
+    // top: 27px;
     width: 100%;
+    .navbar-header {
+        img {
+            max-height: 70px;
+        }
+    }
     .navbar-nav {
         margin-left: 87px;
         li {
@@ -34,8 +39,25 @@
     }
 }
 
+.carousel-caption {
+    top: 207px;
+    left: 40%;
+    width: 665px;
+    text-shadow: initial;
+    h1 {
+        color: #ec1d23;
+    }
+    p {
+        color: $black;
+    }
+}
+
 @media #{$screen-xs-only} {
     .navbar {
+        opacity: 1;
+        .navbar-toggle {
+            margin-right: 10px
+        }
         .navbar-nav {
             margin: 0;
             background-color: #101010;
@@ -51,6 +73,10 @@
 
 @media #{$screen-sm-only} {
     .navbar {
+        opacity: 1;
+        .navbar-toggle {
+            margin-right: 10px
+        }
         .navbar-nav {
             margin: 0;
             background-color: #101010;

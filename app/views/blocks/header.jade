@@ -1,8 +1,8 @@
 header
-  nav.navbar(data-sticky)
+  nav.navbar.navbar-default.navbar-fixed-top
     .container
       .navbar-header
-        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+        button.navbar-toggle.collapsed.pull-right(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
@@ -21,3 +21,38 @@ header
             a(href='/beauty-secrets.html') BÍ QUYẾT LÀM ĐẸP
           li
             a(href='/contact.html') LIÊN HỆ
+  #myCarousel.carousel.slide(data-ride='carousel')
+    ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')         
+        li(data-target='#myCarousel', data-slide-to='1')         
+        li(data-target='#myCarousel', data-slide-to='2')      
+    .carousel-inner(role='listbox')
+      .item.active
+        img.first-slide(src='images/img-home/img-home-banne.png', alt='First slide')
+        .container
+          .carousel-caption
+            h1.text-left CĂNG DA MẶT
+            p.text-left.hiden-xs.hiden-sm Trang thiết bị tối tân,không gian là sự hòa quyện giữ vẻ lãng mạn,sang trọng
+              | của phong cách Pháp và cảm giác ấm cũng như ở nhà, cùng không gian xanh mang hơi thở của thiên nhiên ngay giữa lòng thành phố.
+      .item
+        img.second-slide(src='images/cangdamat-header-image.png', alt='Second slide')
+        .container
+          .carousel-caption
+            h1.text-left CĂNG DA MẶT
+            p.text-left.hiden-xs.hiden-sm Trang thiết bị tối tân,không gian là sự hòa quyện giữ vẻ lãng mạn,sang trọng
+              | của phong cách Pháp và cảm giác ấm cũng như ở nhà, cùng không gian xanh mang hơi thở của thiên nhiên ngay giữa lòng thành phố.    
+      .item
+        img.third-slide(src='images/img-ct/img-ct01.png', alt='Third slide')
+         
+        .container
+          .carousel-caption
+            h1.text-left CĂNG DA MẶT
+            p.text-left.hiden-xs.hiden-sm Trang thiết bị tối tân,không gian là sự hòa quyện giữ vẻ lãng mạn,sang trọng
+              | của phong cách Pháp và cảm giác ấm cũng như ở nhà, cùng không gian xanh mang hơi thở của thiên nhiên ngay giữa lòng thành phố.    
+    a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
+      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+      span.sr-only Previous
+    a.right.carousel-control(href='#myCarousel', role='button', data-slide='next')
+      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+      span.sr-only Next
+
