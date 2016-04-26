@@ -10,7 +10,7 @@ footer.main-footer.hidden-print
           .image-slide-block.col-md-4.col-xs-3
             img.img-circle(src='images/img-slide-footer.png', alt='img-slide-footer')
           .slide-text.col-md-8.col-xs-9
-            .text-block.idea-text.visible-xs
+            .text-block.idea-text.visible-xs.visible-sm
               p  Ý KIẾN KHÁCH HÀNG
             h3   Trần Thị Hoài An
             p    Tinh dầu là một trong những loại tinh dầu thiên nhiên được chiết xuất hoàn
@@ -35,41 +35,45 @@ footer.main-footer.hidden-print
                  | toàn từ vỏ bưởi ( phần vỏ xanh với những nốt nhỏ li ti)
 
   .footer-top: .container-fluid
-    .image-spa.col-md-2.col-xs-3
+    .image-spa
       +link({title: 'Inpi', href: 'index.html'}).logo-footer
-        +img({src: 'images/spa-logo-footer.png', alt: 'spa-logo'})
+        +img({src: 'images/spa-logo-footer.png', alt: 'spa-logo'}).img-responsive
     .info-spa.col-md-10.col-xs-9
       h2 Viện Thẩm Mỹ Quốc Tế Dencos Luxury
-      ul.link-list.list-unstyled.visible-xs
+      ul.link-list.list-unstyled.visible-xs.visible-sm
             li Cơ sở chính:559-561 Trần Hưng Đạo,P.Cầu Kho,Q.1.HCM
             li Tel:+84(0)8.710.96.999 - Mobile:+84.906.8888.36
             li Chi nhánh Vũng Tàu:227A Lê Hồng Phong,P8,TP.Vũng Tàu
             li Tel:+846.435.45.855 - Mobile:+84.906.8888.36
-      .row.hidden-xs
-        .item.col-md-3.col-sm-6
+      .row.hidden-xs.hidden-sm
+        .item.col-md-4.col-sm-6
           ul.link-list.list-unstyled
             li Cơ sở chính:559-561 Trần Hưng Đạo,P.Cầu Kho,Q.1.HCM
             li Tel:+84(0)8.710.96.999 - Mobile:+84.906.8888.36
             li Chi nhánh Hà Nội:135-137 Bùi Thị Xuân, Quận Hai Bà Trưng, Hà Nội
             li Tel:+04.6689.2299 - Mobile:+84.902.8888
             li Website:www.dencosluxury.com
-        .item.col-md-3.col-sm-6
+        .item.col-md-4.col-sm-6
           ul.link-list.list-unstyled
             li Chi nhánh Vũng Tàu:227A Lê Hồng Phong,P8,TP.Vũng Tàu
             li Tel:+846.435.45.855 - Mobile:+84.906.8888.36
             li Chi nhánh Cần Thơ:357 đường 30/4,P.Hưng Lợi,Q.Ninh Kiều, TP.Cần Thơ
             li Tel:+847.106.284.999
             li Email:tuvan@dencosluxury.com
-        .item.col-md-3.col-sm-6
-          nav
+        .item.col-md-4.col-sm-6
+          nav.nav.custom-bar
             ul.link-list.list-unstyled
-              li Trang chủ
-              li Liên hệ
-              li Giới thiệu
+              li
+                +link({title: 'Trang chủ'})
+              li 
+                +link({title: 'Liên hệ'})
+              li 
+                +link({title: 'Giới thiệu'})
           img(src='images/dmca-protected.png', alt='dmca-protected')
-          p Tất cả các phẫu thuật và gây mê đều thực hiện tại Bệnh viện
-    p.visible-xs.mail Website:www.dencosluxury.com / Email:tuvan@dencosluxury.com
-  .footer-bottom: .container-fluid
+      .surgery-block
+        p.surgery.hidden-xs.hidden-sm Tất cả các phẫu thuật và gây mê đều thực hiện tại Bệnh viện
+    p.visible-xs.visible-sm.mail Email:tuvan@dencosluxury.com /Website:www.dencosluxury.com  
+  .hidden-xs.hidden-sm.footer-bottom: .container-fluid
     ul.social-list.list-unstyled.pull-right
       li
         +link({title: 'Facebook'})

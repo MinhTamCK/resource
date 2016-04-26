@@ -5,13 +5,9 @@ block vars
   -bodyClass = ''
 
 doctype html
-//[if IE 9]><html lang="en" class="no-js ie ie9"><![endif]
-//[if gt IE 9]><!
 html(class="no-js", lang="en")
-  //<![endif]
   head
     meta(charset="utf-8")
-    //[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]
     title=title
     meta(name="description", content="")
     meta(name="keywords", content="")
@@ -26,10 +22,9 @@ html(class="no-js", lang="en")
     script(src="js/modernizr.js")
     block script
   body(class=bodyClass)
-    .container-fruit
-      img.img-responsive(src='images/cangdamat-header-image.png', alt='banner page')
     include ../blocks/header
     main: .container
+      include ../blocks/breadcrumb
       block container
     include ../blocks/script
     include ../blocks/footer

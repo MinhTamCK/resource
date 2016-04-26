@@ -3,9 +3,8 @@
   padding-left: 0;
   padding-right: 0;
   a, > .active {
-    color: $white;
+    color: $black;
     font-size: rem-calc(14px);
-    font-family: $font-inpi-thin;
   }
   a {
     .no-touch &:hover {
@@ -28,6 +27,6 @@
   }
   > .active {
     padding-right: 0;
-    color: $white;
+    color: #777;
   }
 }
