@@ -228,6 +228,10 @@ a {
     }
 }
 
+.img-responsive {
+    margin: 0 auto;
+}
+
 @media #{$screen-xs-only} {
     .bounce-up {
         min-height: 320px;
