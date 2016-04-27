@@ -233,6 +233,14 @@ a {
     }
 }
 
+.carousel-control.right {
+    background-image: initial;
+}
+
+.carousel-control.left {
+    background-image: initial;
+}
+
 @media #{$screen-xs-only} {
     .bounce-up {
         min-height: 320px;
@@ -243,11 +251,6 @@ a {
     .bounce-up {
         min-height: 320px;
     }
-    // .img-footer-block {
-    //     .img-br:hover > a::after {
-    //         background: rgba(255, 231, 231, 0.8);
-    //     }
-    // }
 }
 
 .img-footer-block {
@@ -277,12 +280,6 @@ a {
         .img-br:hover > a::after {
             background: rgba(255, 231, 231, 0.8);
         }
-    }
-    .carousel-control.right {
-        background-image : initial;
-    }
-    .carousel-control.left {
-        background-image : initial;   
     }
 }
 
